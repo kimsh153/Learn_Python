@@ -95,3 +95,32 @@ def TwoD_List():
         b.append(line)
     a = [[0] * i for i in [3, 1, 2, 7, 5]]
     print(a)
+
+
+# string
+def string():
+    s = 'Hello, world'
+    s = s.replace('world', 'Python')
+    print(s)
+    table = str.maketrans('aeiou', '12345')
+    print('apple'.translate(table))
+    print('apple pear grape pineapple orange'.split())
+    print('.'.join(['apple', 'pear', 'grape', 'pineapple', 'orange']))
+    print('python'.upper())
+    print('PYTHON'.lower())
+    print('     python      '.lstrip())
+    print('     python      '.rstrip())
+    print('     python      '.strip())
+    print(', python.'.lstrip(',.'))
+    print(', python.'.rstrip(',.'))
+    print(', python.'.strip(',.'))
+    print('python'.ljust(10))
+    print('python'.rjust(10))
+    print('python'.center(10))
+    print('python'.rjust(10).upper())
+    print('35'.zfill(4))
+    print('apple pineapple'.find('pl'))
+    print('apple pineapple'.rfind('pl'))
+    print('apple pineapple'.index('pl'))
+    print('apple pineapple'.rindex('pl'))
+    print('apple pineapple'.count('pl'))
