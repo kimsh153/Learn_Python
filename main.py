@@ -124,3 +124,22 @@ def string():
     print('apple pineapple'.index('pl'))
     print('apple pineapple'.rindex('pl'))
     print('apple pineapple'.count('pl'))
+    print('I am %s.' % 'james')
+    name = 'maria'
+    print('I am %s.' % name)
+    print('I am %d years old.' % 20)
+    print('%.2f' % 2.3)
+    print('%10s' % 'python')
+    print('Today is %d %s.' % (3, 'April'))
+    print('Hello, {0}'.format('world'))
+    print('Hello, {0}'.format(100))
+    print('Hello, {0} {2} {1}'.format('Python', 'Script', 3.6))
+    print('Hello, {} {} {}'.format('Python', 'Script', 3.6))
+    print('Hello, {language} {version} '.format(language='Python', version=3.6))
+    language = 'python'
+    version = 3.6
+    print(f'Hello, {language} {version}')
+    print('{{ {0} }}'.format('python'))
+    print('{0:>10}'.format('python'))
+    print('{0:0>10}'.format(15))
+    print('{0:x>10}'.format(15))
