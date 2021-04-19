@@ -143,3 +143,26 @@ def string():
     print('{0:>10}'.format('python'))
     print('{0:0>10}'.format(15))
     print('{0:x>10}'.format(15))
+
+
+# Dictionary
+x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
+x.setdefault('e')
+x.setdefault('f', 100)
+x.update(a=90)
+x.update(e=50)
+x.update(a=400, f=60)
+x.popitem()
+print(x.get('a'))
+print(x.items())
+print(x.keys())
+print(x.values())
+print(x)
+y = {1: 'one', 2: 'two'}
+y.update({1: 'ONE', 3: 'THREE'})
+y.update([[2, 'TWO'], [4, 'FOUR']])
+print(y)
+y.clear()
+keys = ['a', 'b', 'c', 'd']
+y = dict.fromkeys(keys, 100)
+print(y)
