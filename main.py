@@ -166,3 +166,15 @@ y.clear()
 keys = ['a', 'b', 'c', 'd']
 y = dict.fromkeys(keys, 100)
 print(y)
+x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
+for i in x:
+    print(i, end=' ')
+print()
+for key, value in x.items():
+    print(key, value)
+for key in x.keys():
+    print(key, end=' ')
+print()
+for value in x.values():
+    print(value, end=' ')
+keys = ['a', 'b', 'c', 'd']
