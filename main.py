@@ -1,4 +1,5 @@
 import turtle as t
+import copy
 
 
 # for 별찍기
@@ -146,44 +147,82 @@ def string():
 
 
 # Dictionary
-x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
-x.setdefault('e')
-x.setdefault('f', 100)
-x.update(a=90)
-x.update(e=50)
-x.update(a=400, f=60)
-x.popitem()
-print(x.get('a'))
-print(x.items())
-print(x.keys())
-print(x.values())
-print(x)
-y = {1: 'one', 2: 'two'}
-y.update({1: 'ONE', 3: 'THREE'})
-y.update([[2, 'TWO'], [4, 'FOUR']])
-print(y)
-y.clear()
-keys = ['a', 'b', 'c', 'd']
-y = dict.fromkeys(keys, 100)
-print(y)
-x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
-for i in x:
-    print(i, end=' ')
-print()
-for key, value in x.items():
-    print(key, value)
-for key in x.keys():
-    print(key, end=' ')
-print()
-for value in x.values():
-    print(value, end=' ')
-print()
-keys = ['a', 'b', 'c', 'd']
-x = {key: value for key, value in dict.fromkeys(keys).items()}
-print(x)
-print({key: 0 for key in dict.fromkeys(['a', 'b', 'c', 'd']).keys()})
-print({value: 0 for value in {'a': 10, 'b': 20, 'c': 30, 'd': 40}.values()})
-print({value: key for key, value in {'a': 10, 'b': 20, 'c': 30, 'd': 40}.items()})
-x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
-x = {key: value for key, value in x.items() if value != 20}
-print(x)
+def Dictionary():
+    x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
+    x.setdefault('e')
+    x.setdefault('f', 100)
+    x.update(a=90)
+    x.update(e=50)
+    x.update(a=400, f=60)
+    x.popitem()
+    print(x.get('a'))
+    print(x.items())
+    print(x.keys())
+    print(x.values())
+    print(x)
+    y = {1: 'one', 2: 'two'}
+    y.update({1: 'ONE', 3: 'THREE'})
+    y.update([[2, 'TWO'], [4, 'FOUR']])
+    print(y)
+    y.clear()
+    keys = ['a', 'b', 'c', 'd']
+    y = dict.fromkeys(keys, 100)
+    print(y)
+    x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
+    for i in x:
+        print(i, end=' ')
+    print()
+    for key, value in x.items():
+        print(key, value)
+    for key in x.keys():
+        print(key, end=' ')
+    print()
+    for value in x.values():
+        print(value, end=' ')
+    print()
+    keys = ['a', 'b', 'c', 'd']
+    x = {key: value for key, value in dict.fromkeys(keys).items()}
+    print(x)
+    print({key: 0 for key in dict.fromkeys(['a', 'b', 'c', 'd']).keys()})
+    print({value: 0 for value in {'a': 10, 'b': 20, 'c': 30, 'd': 40}.values()})
+    print({value: key for key, value in {'a': 10, 'b': 20, 'c': 30, 'd': 40}.items()})
+    x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
+    x = {key: value for key, value in x.items() if value != 20}
+    print(x)
+    terrestrial_planet = {
+        'Mercury': {
+            'mean_radius': 2439.7,
+            'mass': 3.3022E+23,
+            'orbital_period': 87.969
+        },
+        'Venus': {
+            'mean_radius': 6371.0,
+            'mass': 5.97219E+24,
+            'orbital_period': 365.25641,
+        },
+        'Mars': {
+            'mean_radius': 33389.5,
+            'mass': 6.4185E+23,
+            'orbital_period': 686.9600,
+        }
+    }
+    print(terrestrial_planet['Venus']['mean_radius'])
+    x = {'a': 0, 'b': 0, 'c': 0, 'd': 0}
+    y = x
+    y['a'] = 99
+    print(y is x)
+    print(x['a'])
+    print(y['a'])
+    z = x.copy()
+    print(x is z)
+    print(x == z)
+    z['b'] = 99
+    print(x['b'])
+    print(z['b'])
+    x = {'a': {'python': '2.7'}, 'b': {'python': '3.6'}}
+    y = x.copy()
+    y['a']['python'] = '2.7.15'
+    print(x, y, sep='\n')
+    y = copy.deepcopy(x)
+    y['a']['python'] = '2.7.15'
+    print(x, y, sep='\n')
