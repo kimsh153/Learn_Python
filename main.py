@@ -251,3 +251,55 @@ print(type(c))
 print(set('안녕하세요'))
 a = frozenset(range(10))
 print(a)
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+print(a | b)
+print(set.union(a, b))
+print(a & b)
+print(set.intersection(a, b))
+print(a - b)
+print(set.difference(a, b))
+print(a ^ b)
+print(set.symmetric_difference(a, b))
+a = {1, 2, 3, 4}
+a |= {5}
+print(a)
+a = {1, 2, 3, 4}
+a.update({5})
+print(a)
+a = {1, 2, 3, 4}
+a &= {0, 1, 2, 3, 4}
+print(a)
+a = {1, 2, 3, 4}
+a.intersection_update({0, 1, 2, 3, 4})
+print(a)
+a = {1, 2, 3, 4}
+a -= {3}
+print(a)
+a = {1, 2, 3, 4}
+a.difference_update({3})
+print(a)
+a = {1, 2, 3, 4}
+a ^= {3, 4, 5, 6}
+print(a)
+a = {1, 2, 3, 4}
+a.symmetric_difference_update({3, 4, 5, 6})
+print(a)
+a = {1, 2, 3, 4}
+print(a <= {1, 2, 3, 4})
+print(a.issubset({1, 2, 3, 4, 5}))
+a = {1, 2, 3, 4}
+print(a < {1, 2, 3, 4, 5})
+a = {1, 2, 3, 4}
+print(a >= {1, 2, 3, 4})
+print(a.issuperset({1, 2, 3, 4}))
+a = {1, 2, 3, 4}
+print(a > {1, 2, 3})
+a = {1, 2, 3, 4}
+print(a == {1, 2, 3, 4})
+print(a == {4, 2, 1, 3})
+a = {1, 2, 3, 4}
+print(a != {1, 2, 3})
+a = {1, 2, 3, 4}
+print(a.isdisjoint({5, 6, 7, 8}))
+print(a.isdisjoint({3, 4, 5, 6}))
