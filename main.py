@@ -226,3 +226,28 @@ def Dictionary():
     y = copy.deepcopy(x)
     y['a']['python'] = '2.7.15'
     print(x, y, sep='\n')
+
+
+# set
+fruits = {'strawberry', 'grape', 'orange', 'pineapple', 'cherry'}
+print(fruits)
+fruits = {'orange', 'orange', 'cherry'}
+print(fruits)
+fruits = {'strawberry', 'grape', 'orange', 'pineapple', 'cherry'}
+print('orange' in fruits)
+print('peach' in fruits)
+print('orange' not in fruits)
+print('peach' not in fruits)
+a = set('apple')
+print(a)
+b = set(range(5))
+print(b)
+c = set()
+print(c)
+c = {}
+print(type(c))
+c = set()
+print(type(c))
+print(set('안녕하세요'))
+a = frozenset(range(10))
+print(a)
