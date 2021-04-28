@@ -303,3 +303,20 @@ print(a != {1, 2, 3})
 a = {1, 2, 3, 4}
 print(a.isdisjoint({5, 6, 7, 8}))
 print(a.isdisjoint({3, 4, 5, 6}))
+a = {1, 2, 3, 4}
+a.add(5)
+print(a)
+a.remove(3)
+print(a)
+a.discard(2)
+print(a)
+a.discard(3)
+print(a)
+a = {1, 2, 3, 4}
+a.pop()
+print(a)
+a. clear()
+print(a)
+a = {1, 2, 3, 4}
+print(len(a))
+
