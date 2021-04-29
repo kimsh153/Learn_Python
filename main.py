@@ -319,4 +319,24 @@ a. clear()
 print(a)
 a = {1, 2, 3, 4, 5}
 print(len(a))
-
+a = {1, 2, 3, 4,5}
+for i in a:
+    print(a)
+a = {1, 2, 3, 4}
+for i in a:
+    print(a)
+a = {1, 2, 3, 4}
+b = a
+print(a is b)
+b.add(5)
+print(a)
+print(b)
+a = {1, 2, 3, 4}
+b = a.copy()
+print(a is b)
+print(a == b)
+a = {1, 2, 3, 4}
+b = a.copy()
+b.add(5)
+print(a)
+print(b)
