@@ -319,7 +319,7 @@ a. clear()
 print(a)
 a = {1, 2, 3, 4, 5}
 print(len(a))
-a = {1, 2, 3, 4,5}
+a = {1, 2, 3, 4, 5}
 for i in a:
     print(a)
 a = {1, 2, 3, 4}
@@ -340,3 +340,12 @@ b = a.copy()
 b.add(5)
 print(a)
 print(b)
+a = {1, 2, 3, 4}
+for i in a:
+    print(i)
+for i in {1, 2, 3, 4}:
+    print(i)
+a = (i for i in 'apple')
+print(a)
+a = {i for i in 'pineapple' if i not in 'apl'}
+print(a)
