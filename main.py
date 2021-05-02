@@ -229,123 +229,139 @@ def Dictionary():
 
 
 # set
-fruits = {'strawberry', 'grape', 'orange', 'pineapple', 'cherry'}
-print(fruits)
-fruits = {'orange', 'orange', 'cherry'}
-print(fruits)
-fruits = {'strawberry', 'grape', 'orange', 'pineapple', 'cherry'}
-print('orange' in fruits)
-print('peach' in fruits)
-print('orange' not in fruits)
-print('peach' not in fruits)
-a = set('apple')
-print(a)
-b = set(range(5))
-print(b)
-c = set()
-print(c)
-c = {}
-print(type(c))
-c = set()
-print(type(c))
-print(set('안녕하세요'))
-a = frozenset(range(10))
-print(a)
-a = {1, 2, 3, 4}
-b = {3, 4, 5, 6}
-print(a | b)
-print(set.union(a, b))
-print(a & b)
-print(set.intersection(a, b))
-print(a - b)
-print(set.difference(a, b))
-print(a ^ b)
-print(set.symmetric_difference(a, b))
-a = {1, 2, 3, 4}
-a |= {5}
-print(a)
-a = {1, 2, 3, 4}
-a.update({5})
-print(a)
-a = {1, 2, 3, 4}
-a &= {0, 1, 2, 3, 4}
-print(a)
-a = {1, 2, 3, 4}
-a.intersection_update({0, 1, 2, 3, 4})
-print(a)
-a = {1, 2, 3, 4}
-a -= {3}
-print(a)
-a = {1, 2, 3, 4}
-a.difference_update({3})
-print(a)
-a = {1, 2, 3, 4}
-a ^= {3, 4, 5, 6}
-print(a)
-a = {1, 2, 3, 4}
-a.symmetric_difference_update({3, 4, 5, 6})
-print(a)
-a = {1, 2, 3, 4}
-print(a <= {1, 2, 3, 4})
-print(a.issubset({1, 2, 3, 4, 5}))
-a = {1, 2, 3, 4}
-print(a < {1, 2, 3, 4, 5})
-a = {1, 2, 3, 4}
-print(a >= {1, 2, 3, 4})
-print(a.issuperset({1, 2, 3, 4}))
-a = {1, 2, 3, 4}
-print(a > {1, 2, 3})
-a = {1, 2, 3, 4}
-print(a == {1, 2, 3, 4})
-print(a == {4, 2, 1, 3})
-a = {1, 2, 3, 4}
-print(a != {1, 2, 3})
-a = {1, 2, 3, 4}
-print(a.isdisjoint({5, 6, 7, 8}))
-print(a.isdisjoint({3, 4, 5, 6}))
-a = {1, 2, 3, 4}
-a.add(5)
-print(a)
-a.remove(3)
-print(a)
-a.discard(2)
-print(a)
-a.discard(3)
-print(a)
-a = {1, 2, 3, 4}
-a.pop()
-print(a)
-a. clear()
-print(a)
-a = {1, 2, 3, 4, 5}
-print(len(a))
-a = {1, 2, 3, 4, 5}
-for i in a:
+def set():
+    fruits = {'strawberry', 'grape', 'orange', 'pineapple', 'cherry'}
+    print(fruits)
+    fruits = {'orange', 'orange', 'cherry'}
+    print(fruits)
+    fruits = {'strawberry', 'grape', 'orange', 'pineapple', 'cherry'}
+    print('orange' in fruits)
+    print('peach' in fruits)
+    print('orange' not in fruits)
+    print('peach' not in fruits)
+    a = set('apple')
     print(a)
-a = {1, 2, 3, 4}
-for i in a:
+    b = set(range(5))
+    print(b)
+    c = set()
+    print(c)
+    c = {}
+    print(type(c))
+    c = set()
+    print(type(c))
+    print(set('안녕하세요'))
+    a = frozenset(range(10))
     print(a)
-a = {1, 2, 3, 4}
-b = a
-print(a is b)
-b.add(5)
-print(a)
-print(b)
-a = {1, 2, 3, 4}
-b = a.copy()
-print(a is b)
-print(a == b)
-a = {1, 2, 3, 4}
-b = a.copy()
-b.add(5)
-print(a)
-print(b)
-a = {1, 2, 3, 4}
-for i in a:
-    print(i)
-for i in {1, 2, 3, 4}:
-    print(i)
-a = (i for i in 'apple')
-print(a)
-a = {i for i in 'pineapple' if i not in 'apl'}
-print(a)
+    a = {1, 2, 3, 4}
+    b = {3, 4, 5, 6}
+    print(a | b)
+    print(set.union(a, b))
+    print(a & b)
+    print(set.intersection(a, b))
+    print(a - b)
+    print(set.difference(a, b))
+    print(a ^ b)
+    print(set.symmetric_difference(a, b))
+    a = {1, 2, 3, 4}
+    a |= {5}
+    print(a)
+    a = {1, 2, 3, 4}
+    a.update({5})
+    print(a)
+    a = {1, 2, 3, 4}
+    a &= {0, 1, 2, 3, 4}
+    print(a)
+    a = {1, 2, 3, 4}
+    a.intersection_update({0, 1, 2, 3, 4})
+    print(a)
+    a = {1, 2, 3, 4}
+    a -= {3}
+    print(a)
+    a = {1, 2, 3, 4}
+    a.difference_update({3})
+    print(a)
+    a = {1, 2, 3, 4}
+    a ^= {3, 4, 5, 6}
+    print(a)
+    a = {1, 2, 3, 4}
+    a.symmetric_difference_update({3, 4, 5, 6})
+    print(a)
+    a = {1, 2, 3, 4}
+    print(a <= {1, 2, 3, 4})
+    print(a.issubset({1, 2, 3, 4, 5}))
+    a = {1, 2, 3, 4}
+    print(a < {1, 2, 3, 4, 5})
+    a = {1, 2, 3, 4}
+    print(a >= {1, 2, 3, 4})
+    print(a.issuperset({1, 2, 3, 4}))
+    a = {1, 2, 3, 4}
+    print(a > {1, 2, 3})
+    a = {1, 2, 3, 4}
+    print(a == {1, 2, 3, 4})
+    print(a == {4, 2, 1, 3})
+    a = {1, 2, 3, 4}
+    print(a != {1, 2, 3})
+    a = {1, 2, 3, 4}
+    print(a.isdisjoint({5, 6, 7, 8}))
+    print(a.isdisjoint({3, 4, 5, 6}))
+    a = {1, 2, 3, 4}
+    a.add(5)
+    print(a)
+    a.remove(3)
+    print(a)
+    a.discard(2)
+    print(a)
+    a.discard(3)
+    print(a)
+    a = {1, 2, 3, 4}
+    a.pop()
+    print(a)
+    a.clear()
+    print(a)
+    a = {1, 2, 3, 4, 5}
+    print(len(a))
+    a = {1, 2, 3, 4, 5}
+    for i in a:
+        print(a)
+    a = {1, 2, 3, 4}
+    for i in a:
+        print(a)
+    a = {1, 2, 3, 4}
+    b = a
+    print(a is b)
+    b.add(5)
+    print(a)
+    print(b)
+    a = {1, 2, 3, 4}
+    b = a.copy()
+    print(a is b)
+    print(a == b)
+    a = {1, 2, 3, 4}
+    b = a.copy()
+    b.add(5)
+    print(a)
+    print(b)
+    a = {1, 2, 3, 4}
+    for i in a:
+        print(i)
+    for i in {1, 2, 3, 4}:
+        print(i)
+    a = (i for i in 'apple')
+    print(a)
+    a = {i for i in 'pineapple' if i not in 'apl'}
+    print(a)
+
+
+# file
+file = open('hello.txt', 'w')
+file.write('Hello, world!')
+file.close()
+
+file = open('hello.txt', 'r')
+s = file.read()
+print(s)
+file.close()
+
+with open('hello.txt', 'r')as file:
+    s = file.read()
+    print(s)
