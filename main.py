@@ -426,3 +426,24 @@ print(list(reversed(word)))
 print(word == ''.join(reversed(word)))
 print(word)
 print(''.join(reversed(word)))
+text = 'Hello'
+for i in range(len(text) - 1):
+    print(text[i], text[i + 1], sep='')
+text = 'this is python script'
+words = text.split()
+for i in range(len(words) - 1):
+    print(words[i], words[i + 1])
+text = 'hello'
+two_gram = zip(text, text[1:])
+for i in two_gram:
+    print(i[0], i[1], sep='')
+text = 'hello'
+print(list(zip(text, text[1:])))
+text = 'this is python script'
+words = text.split()
+print(list(zip(words, words[1:])))
+text = 'hello'
+print([text[i:] for i in range(3)])
+print(list(zip(['hello', 'ello', 'llo'])))
+print(list(zip(*['hello', 'ello', 'llo'])))
+print(list(zip(*[text[i:] for i in range(3)])))
