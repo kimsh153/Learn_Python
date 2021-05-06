@@ -1,4 +1,3 @@
-``` python
 import turtle as t
 import copy
 import pickle
@@ -469,4 +468,3 @@ hello()
 x = add(10, 20)
 print(x)
 print(add.__doc__)
-```
