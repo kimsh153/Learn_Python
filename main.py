@@ -468,3 +468,42 @@ hello()
 x = add(10, 20)
 print(x)
 print(add.__doc__)
+
+
+def add(a, b):
+    return a + b
+
+
+x = add(10, 20)
+print(x)
+print(add(10, 20))
+
+
+def one():
+    return 1
+
+
+x = one()
+print(x)
+
+
+def not_ten(a):
+    if a == 10:
+        return
+    print(a, '입니다', sep='')
+
+
+print(not_ten(5))
+print(not_ten(10))
+
+
+def add_sub(a, b):
+    return a + b, a - b
+
+
+x, y = add_sub(10, 20)
+print(x)
+print(y)
+x = add_sub(10, 20)
+print(x)
+print(1, 2)
