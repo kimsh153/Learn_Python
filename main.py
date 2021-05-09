@@ -507,3 +507,46 @@ print(y)
 x = add_sub(10, 20)
 print(x)
 print(1, 2)
+
+
+def mul(a, b):
+    c = a * b
+    return c
+
+
+def add(a, b):
+    c = a + b
+    print(c)
+    d = mul(a, b)
+    print(d)
+
+
+x = 10
+y = 20
+add(x, y)
+print(10, 20, 30)
+
+
+# def print_numbers(a, b, c):
+#    print(a)
+#    print(b)
+#    print(c)
+
+
+# print_numbers(10, 20, 30)
+# x = [10, 20, 30]
+# print_numbers(*x)
+# print_numbers(*[10, 20, 30])
+
+
+def print_numbers(*args):
+    for arg in args:
+        print(arg)
+
+
+print_numbers(10)
+print_numbers(10, 20, 30, 40)
+x = [10]
+print_numbers(*x)
+y = [10, 20, 30, 40]
+print_numbers(*y)
