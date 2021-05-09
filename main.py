@@ -550,3 +550,15 @@ x = [10]
 print_numbers(*x)
 y = [10, 20, 30, 40]
 print_numbers(*y)
+
+
+def personal_info(name, age, address):
+    print('이름: ', name)
+    print('나이: ', age)
+    print('주소: ', address)
+
+
+personal_info('홍길동', 30, '서울시 용산구 이촌동')
+personal_info(name='홍길동', age=30, address='서울시 용산구 이촌동')
+personal_info(age=30, address='서울시 용산구 이촌동', name='홍길동')
+print(10, 20, 30, sep=':', end='')  # sep, end 키워드 인수
