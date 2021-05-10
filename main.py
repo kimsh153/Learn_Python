@@ -583,7 +583,7 @@ personal_info(**y)
 
 def personal_info(**kwargs):
     if 'name' in kwargs:  # in으로 딕셔너리 안에 특정 키가 있는지 확인
-        print('이름: ', kwargs['name'])
+        print('이름: ', kwargs['name']) # 이름이 들어감
     if 'age' in kwargs:
         print('나이: ', kwargs['age'])
     if 'address' in kwargs:
