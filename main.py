@@ -558,7 +558,33 @@ def personal_info(name, age, address):
     print('주소: ', address)
 
 
-personal_info('홍길동', 30, '서울시 용산구 이촌동')
+# personal_info('홍길동', 30, '서울시 용산구 이촌동')
+# personal_info(name='홍길동', age=30, address='서울시 용산구 이촌동')
+# personal_info(age=30, address='서울시 용산구 이촌동', name='홍길동')
+# print(10, 20, 30, sep=':', end='')  # sep, end 키워드 인수
+x = {'name': '홍길동', 'age': 30, 'address': '서울시 용산구 이촌동'}
+personal_info(**x)
+personal_info(**{'name': '홍길동', 'age': 30, 'address': '서울시 용산구 이촌동'})
+personal_info(*x)
+
+
+def personal_info(**kwargs):
+    for kw, arg in kwargs.items():
+        print(kw, ': ', arg, sep='')
+
+
+personal_info(name='홍길동')
 personal_info(name='홍길동', age=30, address='서울시 용산구 이촌동')
-personal_info(age=30, address='서울시 용산구 이촌동', name='홍길동')
-print(10, 20, 30, sep=':', end='')  # sep, end 키워드 인수
+x = {'name': '홍길동'}
+personal_info(**x)
+y = {'name': '홍길동', 'age': 30, 'address': '서울시 용산구 이촌동'}
+personal_info(**y)
+
+
+def personal_info(**kwargs):
+    if 'name' in kwargs:  # in으로 딕셔너리 안에 특정 키가 있는지 확인
+        print('이름: ', kwargs['name'])
+    if 'age' in kwargs:
+        print('나이: ', kwargs['age'])
+    if 'address' in kwargs:
+        print('주소: ', kwargs['address'])
