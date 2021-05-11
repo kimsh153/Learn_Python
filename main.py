@@ -230,7 +230,7 @@ def Dictionary():
 
 
 # set
-def set():
+def Learn_set():
     fruits = {'strawberry', 'grape', 'orange', 'pineapple', 'cherry'}
     print(fruits)
     fruits = {'orange', 'orange', 'cherry'}
@@ -608,73 +608,77 @@ def return_function():
 
 
 # lambda
-def plus_ten(n):
-    return n + 10
+def learn_lambda():
+    def plus_ten(n):
+        return n + 10
+
+    print(plus_ten(1))
+    plus_te = lambda z: z + 10
+    plus_te(1)
+    print((lambda z: z + 10)(1))
+    # print((lambda x: y = 10; x + y)(1)) 람다 표현식 안에서는 변수를 만들 수 없다
+    y = 10
+    print((lambda z: z + y)(1))
+
+    def plus_ten(n):
+        return n + 10
+
+    print(list(map(plus_ten, [1, 2, 3])))
+    print(list(map(lambda z: z + 10, [1, 2, 3])))
+    print((lambda: 1)())
+    x = 10
+    print((lambda: x)())
+    a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print(list(map(lambda x: str(x) if x % 3 == 0 else x, a)))  # 람다 표현식에선 if를 쓰면 else를 반드시 써야한다
+    a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print(list(map(lambda x: str(x) if x == 1 else float(x) if x == 2 else x + 10, a)))
+
+    def f(x):
+        if x == 1:
+            return str(x)
+        elif x == 2:
+            return float(x)
+        else:
+            return x + 10
+
+    a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print(list(map(f, a)))
+    a = [1, 2, 3, 4, 5]
+    b = [2, 4, 6, 8, 10]
+    print(list(map(lambda x, y: x * y, a, b)))
+
+    def f(x):
+        return 5 < x < 10
+
+    a = [8, 3, 2, 10, 15, 7, 1, 9, 0, 11]
+    print(list(filter(f, a)))  # [i for i in a if i > 5 and i < 10]
+    print(list(filter(lambda x: 5 < x < 10, a)))
+
+    def f(x, y):
+        return x + y
+
+    a = [1, 2, 3, 4, 5]
+    from functools import reduce
+
+    print(reduce(f, a))
+
+    a = [1, 2, 3, 4, 5]
+    from functools import reduce
+    print(reduce(lambda x, y: x + y, a))
+    # x = a[0]
+    # for i in range(len(a) - 1):
+    #     x = x + a[i + 1]
+    #
+    # print(x)
 
 
-print(plus_ten(1))
-plus_te = lambda z: z + 10
-plus_te(1)
-print((lambda z: z + 10)(1))
-# print((lambda x: y = 10; x + y)(1)) 람다 표현식 안에서는 변수를 만들 수 없다
-y = 10
-print((lambda z: z + y)(1))
+class Person:
+    def __init__(self):
+        self.hello = '안녕하세요'
+
+    def greeting(self):
+        print(self.hello)
 
 
-def plus_ten(n):
-    return n + 10
-
-
-print(list(map(plus_ten, [1, 2, 3])))
-print(list(map(lambda z: z + 10, [1, 2, 3])))
-print((lambda: 1)())
-x = 10
-print((lambda: x)())
-a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(list(map(lambda x: str(x) if x % 3 == 0 else x, a)))  # 람다 표현식에선 if를 쓰면 else를 반드시 써야한다
-a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(list(map(lambda x: str(x) if x == 1 else float(x) if x == 2 else x + 10, a)))
-
-
-def f(x):
-    if x == 1:
-        return str(x)
-    elif x == 2:
-        return float(x)
-    else:
-        return x + 10
-
-
-a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(list(map(f, a)))
-a = [1, 2, 3, 4, 5]
-b = [2, 4, 6, 8, 10]
-print(list(map(lambda x, y: x * y, a, b)))
-
-
-def f(x):
-    return 5 < x < 10
-
-
-a = [8, 3, 2, 10, 15, 7, 1, 9, 0, 11]
-print(list(filter(f, a))) # [i for i in a if i > 5 and i < 10]
-print(list(filter(lambda x: 5 < x < 10, a)))
-
-
-def f(x, y):
-    return x + y
-
-
-a = [1, 2, 3, 4, 5]
-from functools import reduce
-
-print(reduce(f, a))
-
-a =[1, 2, 3, 4, 5]
-from functools import reduce
-print(reduce(lambda x, y: x + y, a))
-# x = a[0]
-# for i in range(len(a) - 1):
-#     x = x + a[i + 1]
-#
-# print(x)
+james = Person()
+james.greeting()
