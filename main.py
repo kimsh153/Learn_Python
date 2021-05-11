@@ -451,185 +451,230 @@ def palindrome():
 
 
 # function
-def hello():
-    print('Hello, world!')
+def function():
+    def hello():
+        print('Hello, world!')
 
+    def pas():
+        pass
 
-def pas():
-    pass
+    def add(a, b):
+        """독스트링 이 함수는 a와 b를 더한 뒤 결과를 변환하는 함수입니다."""
+        return a + b
 
+    hello()
+    x = add(10, 20)
+    print(x)
+    print(add.__doc__)
 
-def add(a, b):
-    """독스트링 이 함수는 a와 b를 더한 뒤 결과를 변환하는 함수입니다."""
-    return a + b
+    def add(a, b):
+        return a + b
 
+    x = add(10, 20)
+    print(x)
+    print(add(10, 20))
 
-hello()
-x = add(10, 20)
-print(x)
-print(add.__doc__)
-
-
-def add(a, b):
-    return a + b
-
-
-x = add(10, 20)
-print(x)
-print(add(10, 20))
-
-
-def one():
-    return 1
-
-
-x = one()
-print(x)
-
-
-def not_ten(a):
-    if a == 10:
-        return
-    print(a, '입니다', sep='')
-
-
-print(not_ten(5))
-print(not_ten(10))
-
-
-def add_sub(a, b):
-    return a + b, a - b
-
-
-x, y = add_sub(10, 20)
-print(x)
-print(y)
-x = add_sub(10, 20)
-print(x)
-print(1, 2)
-
-
-def mul(a, b):
-    c = a * b
-    return c
-
-
-def add(a, b):
-    c = a + b
-    print(c)
-    d = mul(a, b)
-    print(d)
-
-
-x = 10
-y = 20
-add(x, y)
-print(10, 20, 30)
-
-
-# def print_numbers(a, b, c):
-#    print(a)
-#    print(b)
-#    print(c)
-
-
-# print_numbers(10, 20, 30)
-# x = [10, 20, 30]
-# print_numbers(*x)
-# print_numbers(*[10, 20, 30])
-
-
-def print_numbers(*args):
-    for arg in args:
-        print(arg)
-
-
-print_numbers(10)
-print_numbers(10, 20, 30, 40)
-x = [10]
-print_numbers(*x)
-y = [10, 20, 30, 40]
-print_numbers(*y)
-
-
-def personal_info(name, age, address):
-    print('이름: ', name)
-    print('나이: ', age)
-    print('주소: ', address)
-
-
-# personal_info('홍길동', 30, '서울시 용산구 이촌동')
-# personal_info(name='홍길동', age=30, address='서울시 용산구 이촌동')
-# personal_info(age=30, address='서울시 용산구 이촌동', name='홍길동')
-# print(10, 20, 30, sep=':', end='')  # sep, end 키워드 인수
-x = {'name': '홍길동', 'age': 30, 'address': '서울시 용산구 이촌동'}
-personal_info(**x)
-personal_info(**{'name': '홍길동', 'age': 30, 'address': '서울시 용산구 이촌동'})
-personal_info(*x)
-
-
-def personal_info(**kwargs):
-    for kw, arg in kwargs.items():
-        print(kw, ': ', arg, sep='')
-
-
-personal_info(name='홍길동')
-personal_info(name='홍길동', age=30, address='서울시 용산구 이촌동')
-x = {'name': '홍길동'}
-personal_info(**x)
-y = {'name': '홍길동', 'age': 30, 'address': '서울시 용산구 이촌동'}
-personal_info(**y)
-
-
-def personal_info(**kwargs):
-    if 'name' in kwargs:  # in으로 딕셔너리 안에 특정 키가 있는지 확인
-        print('이름: ', kwargs['name'])  # 이름이 들어감
-    if 'age' in kwargs:
-        print('나이: ', kwargs['age'])
-    if 'address' in kwargs:
-        print('주소: ', kwargs['address'])
-
-
-def personal_info(name, age, address='비공개'):
-    print('이름: ', name)
-    print('나이: ', age)
-    print('주소: ', address)
-
-
-personal_info('홍길동', 30)
-personal_info('홍길동', 30, '서울시 용산구 이촌동')
-
-
-# def personal_info(name, address='비공개', age):
-#     print('이름: ',name)
-#     print('나이: ', age)
-#     print('주소: ', address) 이렇게 하면 실행 안됨 위치를 잘 맞춰야함
-
-
-# def hello(): 무한반복 위험
-#     print('Hello, world!')
-#     hello()
-#
-#
-# hello()
-def hello(count):
-    if count == 0:
-        return
-
-    print('Hello, world!', count)
-
-    count -= 1
-    hello(count)
-
-
-hello(5)
-
-
-def factorial(n):
-    if n == 1:
+    def one():
         return 1
-    return n * factorial(n - 1)
+
+    x = one()
+    print(x)
+
+    def not_ten(a):
+        if a == 10:
+            return
+        print(a, '입니다', sep='')
+
+    print(not_ten(5))
+    print(not_ten(10))
+
+    def add_sub(a, b):
+        return a + b, a - b
+
+    x, y = add_sub(10, 20)
+    print(x)
+    print(y)
+    x = add_sub(10, 20)
+    print(x)
+    print(1, 2)
+
+    def mul(a, b):
+        c = a * b
+        return c
+
+    def add(a, b):
+        c = a + b
+        print(c)
+        d = mul(a, b)
+        print(d)
+
+    x = 10
+    y = 20
+    add(x, y)
+    print(10, 20, 30)
+
+    # def print_numbers(a, b, c):
+    #    print(a)
+    #    print(b)
+    #    print(c)
+
+    # print_numbers(10, 20, 30)
+    # x = [10, 20, 30]
+    # print_numbers(*x)
+    # print_numbers(*[10, 20, 30])
+
+    def print_numbers(*args):
+        for arg in args:
+            print(arg)
+
+    print_numbers(10)
+    print_numbers(10, 20, 30, 40)
+    x = [10]
+    print_numbers(*x)
+    y = [10, 20, 30, 40]
+    print_numbers(*y)
+
+    def personal_info(name, age, address):
+        print('이름: ', name)
+        print('나이: ', age)
+        print('주소: ', address)
+
+    # personal_info('홍길동', 30, '서울시 용산구 이촌동')
+    # personal_info(name='홍길동', age=30, address='서울시 용산구 이촌동')
+    # personal_info(age=30, address='서울시 용산구 이촌동', name='홍길동')
+    # print(10, 20, 30, sep=':', end='')  # sep, end 키워드 인수
+    x = {'name': '홍길동', 'age': 30, 'address': '서울시 용산구 이촌동'}
+    personal_info(**x)
+    personal_info(**{'name': '홍길동', 'age': 30, 'address': '서울시 용산구 이촌동'})
+    personal_info(*x)
+
+    def personal_info(**kwargs):
+        for kw, arg in kwargs.items():
+            print(kw, ': ', arg, sep='')
+
+    personal_info(name='홍길동')
+    personal_info(name='홍길동', age=30, address='서울시 용산구 이촌동')
+    x = {'name': '홍길동'}
+    personal_info(**x)
+    y = {'name': '홍길동', 'age': 30, 'address': '서울시 용산구 이촌동'}
+    personal_info(**y)
+
+    def personal_info(**kwargs):
+        if 'name' in kwargs:  # in으로 딕셔너리 안에 특정 키가 있는지 확인
+            print('이름: ', kwargs['name'])  # 이름이 들어감
+        if 'age' in kwargs:
+            print('나이: ', kwargs['age'])
+        if 'address' in kwargs:
+            print('주소: ', kwargs['address'])
+
+    def personal_info(name, age, address='비공개'):
+        print('이름: ', name)
+        print('나이: ', age)
+        print('주소: ', address)
+
+    personal_info('홍길동', 30)
+    personal_info('홍길동', 30, '서울시 용산구 이촌동')
+
+    # def personal_info(name, address='비공개', age):
+    #     print('이름: ',name)
+    #     print('나이: ', age)
+    #     print('주소: ', address) #이렇게 하면 실행 안됨 위치를 잘 맞춰야함
 
 
-print(factorial(5))
+def return_function():
+    def hello():  # 무한반복 위험
+        print('Hello, world!')
+        hello()
 
+    hello()
+
+    def hello(count):
+        if count == 0:
+            return
+
+        print('Hello, world!', count)
+
+        count -= 1
+        hello(count)
+
+    hello(5)
+
+    def factorial(n):
+        if n == 1:
+            return 1
+        return n * factorial(n - 1)
+
+    print(factorial(5))
+
+
+# lambda
+def plus_ten(n):
+    return n + 10
+
+
+print(plus_ten(1))
+plus_te = lambda z: z + 10
+plus_te(1)
+print((lambda z: z + 10)(1))
+# print((lambda x: y = 10; x + y)(1)) 람다 표현식 안에서는 변수를 만들 수 없다
+y = 10
+print((lambda z: z + y)(1))
+
+
+def plus_ten(n):
+    return n + 10
+
+
+print(list(map(plus_ten, [1, 2, 3])))
+print(list(map(lambda z: z + 10, [1, 2, 3])))
+print((lambda: 1)())
+x = 10
+print((lambda: x)())
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(list(map(lambda x: str(x) if x % 3 == 0 else x, a)))  # 람다 표현식에선 if를 쓰면 else를 반드시 써야한다
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(list(map(lambda x: str(x) if x == 1 else float(x) if x == 2 else x + 10, a)))
+
+
+def f(x):
+    if x == 1:
+        return str(x)
+    elif x == 2:
+        return float(x)
+    else:
+        return x + 10
+
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(list(map(f, a)))
+a = [1, 2, 3, 4, 5]
+b = [2, 4, 6, 8, 10]
+print(list(map(lambda x, y: x * y, a, b)))
+
+
+def f(x):
+    return 5 < x < 10
+
+
+a = [8, 3, 2, 10, 15, 7, 1, 9, 0, 11]
+print(list(filter(f, a))) # [i for i in a if i > 5 and i < 10]
+print(list(filter(lambda x: 5 < x < 10, a)))
+
+
+def f(x, y):
+    return x + y
+
+
+a = [1, 2, 3, 4, 5]
+from functools import reduce
+
+print(reduce(f, a))
+
+a =[1, 2, 3, 4, 5]
+from functools import reduce
+print(reduce(lambda x, y: x + y, a))
+# x = a[0]
+# for i in range(len(a) - 1):
+#     x = x + a[i + 1]
+#
+# print(x)
