@@ -583,8 +583,53 @@ personal_info(**y)
 
 def personal_info(**kwargs):
     if 'name' in kwargs:  # in으로 딕셔너리 안에 특정 키가 있는지 확인
-        print('이름: ', kwargs['name']) # 이름이 들어감
+        print('이름: ', kwargs['name'])  # 이름이 들어감
     if 'age' in kwargs:
         print('나이: ', kwargs['age'])
     if 'address' in kwargs:
         print('주소: ', kwargs['address'])
+
+
+def personal_info(name, age, address='비공개'):
+    print('이름: ', name)
+    print('나이: ', age)
+    print('주소: ', address)
+
+
+personal_info('홍길동', 30)
+personal_info('홍길동', 30, '서울시 용산구 이촌동')
+
+
+# def personal_info(name, address='비공개', age):
+#     print('이름: ',name)
+#     print('나이: ', age)
+#     print('주소: ', address) 이렇게 하면 실행 안됨 위치를 잘 맞춰야함
+
+
+# def hello(): 무한반복 위험
+#     print('Hello, world!')
+#     hello()
+#
+#
+# hello()
+def hello(count):
+    if count == 0:
+        return
+
+    print('Hello, world!', count)
+
+    count -= 1
+    hello(count)
+
+
+hello(5)
+
+
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+
+print(factorial(5))
+
