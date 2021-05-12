@@ -720,3 +720,64 @@ class Person:
 
 maria = Person('마리아', 20, '서울시 서초구 반포동', 10000)
 maria.pay(3000)
+
+
+class Person:
+    bag = []
+
+    def put_bag(self, stuff):
+        self.bag.append(stuff)
+
+
+james = Person()
+james.put_bag('책')
+
+maria = Person()
+maria.put_bag('열쇠')
+
+print(james.bag)
+print(maria.bag)
+
+
+class Person:
+    def __init__(self):
+        self.bag = []
+
+    def put_bag(self, stuff):
+        self.bag.append(stuff)
+
+
+james = Person()
+james.put_bag('책')
+
+maria = Person()
+maria.put_bag('열쇠')
+
+print(james.bag)
+print(maria.bag)
+
+
+# class Knight:
+#     __item_limit = 10
+#
+#     def print_item_limit(self):
+#         print(Knight.__item_limit)
+#
+# x = Knight()
+# x.print_item_limit()
+#
+# print(Knight.__item_limit)
+
+class Person:
+    """사람 클래스입니다."""
+
+    def greeting(self):
+        """인사 메서드입니다."""
+        print('Hello')
+
+
+print(Person.__doc__)
+print(Person.greeting.__doc__)
+
+maria = Person()
+print(maria.greeting.__doc__)
