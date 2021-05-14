@@ -763,10 +763,12 @@ print(maria.bag)
 #     def print_item_limit(self):
 #         print(Knight.__item_limit)
 #
+#
 # x = Knight()
 # x.print_item_limit()
 #
-# print(Knight.__item_limit)
+# print(Knight._item_limit)
+
 
 class Person:
     """사람 클래스입니다."""
@@ -781,3 +783,34 @@ print(Person.greeting.__doc__)
 
 maria = Person()
 print(maria.greeting.__doc__)
+
+
+class Calc:
+    @staticmethod
+    def add(a, b):
+        print(a + b)
+
+    @staticmethod
+    def mul(a, b):
+        print(a * b)
+
+
+Calc.add(10, 20)
+Calc.mul(10, 20)
+
+
+class Person:
+    count = 0
+
+    def __init__(self):
+        Person.count += 1
+
+    @classmethod
+    def print_count(cls):
+        print('{0}명 생성되었습니다.'.format(cls.count))
+
+
+james = Person()
+maria = Person()
+
+Person.print_count()
