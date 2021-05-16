@@ -889,3 +889,62 @@ class Student(Person):
 
 james = Student()
 print(james.hello)
+
+
+class Person:
+    def greeting(self):
+        print('안녕하세요')
+
+
+class Student(Person):
+    def greeting(self):
+        print('안녕하세요 저는 파이썬 코딩 도장 학생입니다')
+
+
+james = Student()
+james.greeting()
+
+
+class Person:
+    def greeting(self):
+        print('안녕하세요')
+
+
+class university:
+    def manage_credit(self):
+        print('학점 관리')
+
+
+class Undergraduate(Person, university):
+    def study(self):
+        print('공부하기')
+
+
+james = Undergraduate()
+james.greeting()
+james.manage_credit()
+james.study()
+
+
+class A:
+    def greeting(self):
+        print('안녕하세요 A입니다')
+
+
+class B(A):
+    def greeting(self):
+        print('안녕하세요 B입니다')
+
+
+class C(A):
+    def greeting(self):
+        print('안녕하세요 C입니다')
+
+
+class D(B, C):
+    pass
+
+
+x = D()
+x.greeting()
+print(D.mro())
