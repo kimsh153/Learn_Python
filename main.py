@@ -1,6 +1,7 @@
 import turtle as t
 import copy
 import pickle
+from abc import *
 
 
 # for 별찍기
@@ -948,3 +949,26 @@ class D(B, C):
 x = D()
 x.greeting()
 print(D.mro())
+
+
+class StudentBase(metaclass=ABCMeta):
+    @abstractmethod
+    def study(self):
+        pass
+
+    @abstractmethod
+    def go_to_school(self):
+        pass
+
+
+class Student(StudentBase):
+    def study(self):
+        print('공부하기')
+
+    def go_to_school(self):
+        print('학교가기')
+
+
+james = Student()
+james.study()
+james.go_to_school()
