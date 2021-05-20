@@ -674,322 +674,293 @@ def learn_lambda():
     # print(x)
 
 
-class Person:
-    def __init__(self):
-        self.hello = '안녕하세요'
+# Class
+def Class():
+    class Person:
+        def __init__(self):
+            self.hello = '안녕하세요'
+
+        def greeting(self):
+            print(self.hello)
+
+    james = Person()
+    james.greeting()
+
+    class Person:
+        def __init__(self, name, age, address):
+            self.hello = '안녕하세요'
+            self.name = name
+            self.age = age
+            self.address = address
+
+        def greeting(self):
+            print('{0} 저는 {1}입니다.'.format(self.hello, self.name))
+
+    maria = Person('마리아', 20, '서울시 서초구 반포동')
+    maria.greeting()
 
-    def greeting(self):
-        print(self.hello)
+    print('이름: ', maria.name)
+    print('나이: ', maria.age)
+    print('주소: ', maria.address)
 
+    class Person:
+        def __init__(self, name, age, address, wallet):
+            self.name = name
+            self.age = age
+            self.address = address
+            self.__wallet = wallet
 
-james = Person()
-james.greeting()
+        def pay(self, amount):
+            if amount > self.__wallet:
+                print('돈이 모자라네...')
+                return
+            self.__wallet -= amount
+            print('이제 {0}원 남았네요.'.format(self.__wallet))
 
+    maria = Person('마리아', 20, '서울시 서초구 반포동', 10000)
+    maria.pay(3000)
 
-class Person:
-    def __init__(self, name, age, address):
-        self.hello = '안녕하세요'
-        self.name = name
-        self.age = age
-        self.address = address
+    class Person:
+        bag = []
 
-    def greeting(self):
-        print('{0} 저는 {1}입니다.'.format(self.hello, self.name))
+        def put_bag(self, stuff):
+            self.bag.append(stuff)
 
+    james = Person()
+    james.put_bag('책')
 
-maria = Person('마리아', 20, '서울시 서초구 반포동')
-maria.greeting()
+    maria = Person()
+    maria.put_bag('열쇠')
 
-print('이름: ', maria.name)
-print('나이: ', maria.age)
-print('주소: ', maria.address)
+    print(james.bag)
+    print(maria.bag)
 
+    class Person:
+        def __init__(self):
+            self.bag = []
 
-class Person:
-    def __init__(self, name, age, address, wallet):
-        self.name = name
-        self.age = age
-        self.address = address
-        self.__wallet = wallet
+        def put_bag(self, stuff):
+            self.bag.append(stuff)
 
-    def pay(self, amount):
-        if amount > self.__wallet:
-            print('돈이 모자라네...')
-            return
-        self.__wallet -= amount
-        print('이제 {0}원 남았네요.'.format(self.__wallet))
+    james = Person()
+    james.put_bag('책')
 
+    maria = Person()
+    maria.put_bag('열쇠')
+
+    print(james.bag)
+    print(maria.bag)
 
-maria = Person('마리아', 20, '서울시 서초구 반포동', 10000)
-maria.pay(3000)
+    # class Knight:
+    #     __item_limit = 10
+    #
+    #     def print_item_limit(self):
+    #         print(Knight.__item_limit)
+    #
+    #
+    # x = Knight()
+    # x.print_item_limit()
+    #
+    # print(Knight._item_limit)
+
+    class Person:
+        """사람 클래스입니다."""
+
+        def greeting(self):
+            """인사 메서드입니다."""
+            print('Hello')
+
+    print(Person.__doc__)
+    print(Person.greeting.__doc__)
+
+    maria = Person()
+    print(maria.greeting.__doc__)
 
+    class Calc:
+        @staticmethod
+        def add(a, b):
+            print(a + b)
 
-class Person:
-    bag = []
+        @staticmethod
+        def mul(a, b):
+            print(a * b)
 
-    def put_bag(self, stuff):
-        self.bag.append(stuff)
+    Calc.add(10, 20)
+    Calc.mul(10, 20)
 
+    class Person:
+        count = 0
 
-james = Person()
-james.put_bag('책')
+        def __init__(self):
+            Person.count += 1
 
-maria = Person()
-maria.put_bag('열쇠')
+        @classmethod
+        def print_count(cls):
+            print('{0}명 생성되었습니다.'.format(cls.count))
 
-print(james.bag)
-print(maria.bag)
+    james = Person()
+    maria = Person()
 
+    Person.print_count()
 
-class Person:
-    def __init__(self):
-        self.bag = []
+    class Person:
+        def greeting(self):
+            print('안녕하세요')
 
-    def put_bag(self, stuff):
-        self.bag.append(stuff)
+    class Student(Person):
+        def study(self):
+            print('공부하기')
 
+    james = Student()
+    james.greeting()
+    james.study()
 
-james = Person()
-james.put_bag('책')
+    class Person:
+        def greeting(self):
+            print('안녕하세요.')
 
-maria = Person()
-maria.put_bag('열쇠')
+    class Student(Person):
+        def study(self):
+            print('공부하기')
 
-print(james.bag)
-print(maria.bag)
+    james = Student()
+    james.greeting()
+    james.study()
 
+    class Person:
+        def greeting(self):
+            print('안녕하세요.')
 
-# class Knight:
-#     __item_limit = 10
-#
-#     def print_item_limit(self):
-#         print(Knight.__item_limit)
-#
-#
-# x = Knight()
-# x.print_item_limit()
-#
-# print(Knight._item_limit)
+    class PersonList:
+        def __init__(self):
+            self.person_list = []
 
+        def append_person(self, person):
+            self.person_list.append(person)
 
-class Person:
-    """사람 클래스입니다."""
+    class Person:
+        def __init__(self):
+            print('Perosn __init__')
+            self.hello = '안녕하세요'
 
-    def greeting(self):
-        """인사 메서드입니다."""
-        print('Hello')
+    class Student(Person):
+        def __init__(self):
+            print('Student __init__')
+            super().__init__()  # super(Student, self).__init__()
+            self.school = '파이썬 코딩 도장'
 
+    james = Student()
+    print(james.school)
+    print(james.hello)
 
-print(Person.__doc__)
-print(Person.greeting.__doc__)
+    class Person:
+        def __init__(self):
+            print('Person __init__')
+            self.hello = '안녕하세요'
 
-maria = Person()
-print(maria.greeting.__doc__)
-
-
-class Calc:
-    @staticmethod
-    def add(a, b):
-        print(a + b)
-
-    @staticmethod
-    def mul(a, b):
-        print(a * b)
-
-
-Calc.add(10, 20)
-Calc.mul(10, 20)
-
-
-class Person:
-    count = 0
-
-    def __init__(self):
-        Person.count += 1
-
-    @classmethod
-    def print_count(cls):
-        print('{0}명 생성되었습니다.'.format(cls.count))
-
-
-james = Person()
-maria = Person()
-
-Person.print_count()
-
-
-class Person:
-    def greeting(self):
-        print('안녕하세요')
-
-
-class Student(Person):
-    def study(self):
-        print('공부하기')
-
-
-james = Student()
-james.greeting()
-james.study()
-
-
-class Person:
-    def greeting(self):
-        print('안녕하세요.')
-
-
-class Student(Person):
-    def study(self):
-        print('공부하기')
-
-
-james = Student()
-james.greeting()
-james.study()
-
-
-class Person:
-    def greeting(self):
-        print('안녕하세요.')
-
-
-class PersonList:
-    def __init__(self):
-        self.person_list = []
-
-    def append_person(self, person):
-        self.person_list.append(person)
-
-
-class Person:
-    def __init__(self):
-        print('Perosn __init__')
-        self.hello = '안녕하세요'
-
-
-class Student(Person):
-    def __init__(self):
-        print('Student __init__')
-        super().__init__()  # super(Student, self).__init__()
-        self.school = '파이썬 코딩 도장'
-
-
-james = Student()
-print(james.school)
-print(james.hello)
-
-
-class Person:
-    def __init__(self):
-        print('Person __init__')
-        self.hello = '안녕하세요'
-
-
-class Student(Person):
-    pass
-
-
-james = Student()
-print(james.hello)
-
-
-class Person:
-    def greeting(self):
-        print('안녕하세요')
-
-
-class Student(Person):
-    def greeting(self):
-        print('안녕하세요 저는 파이썬 코딩 도장 학생입니다')
-
-
-james = Student()
-james.greeting()
-
-
-class Person:
-    def greeting(self):
-        print('안녕하세요')
-
-
-class university:
-    def manage_credit(self):
-        print('학점 관리')
-
-
-class Undergraduate(Person, university):
-    def study(self):
-        print('공부하기')
-
-
-james = Undergraduate()
-james.greeting()
-james.manage_credit()
-james.study()
-
-
-class A:
-    def greeting(self):
-        print('안녕하세요 A입니다')
-
-
-class B(A):
-    def greeting(self):
-        print('안녕하세요 B입니다')
-
-
-class C(A):
-    def greeting(self):
-        print('안녕하세요 C입니다')
-
-
-class D(B, C):
-    pass
-
-
-x = D()
-x.greeting()
-print(D.mro())
-
-
-class StudentBase(metaclass=ABCMeta):
-    @abstractmethod
-    def study(self):
+    class Student(Person):
         pass
 
-    @abstractmethod
-    def go_to_school(self):
+    james = Student()
+    print(james.hello)
+
+    class Person:
+        def greeting(self):
+            print('안녕하세요')
+
+    class Student(Person):
+        def greeting(self):
+            print('안녕하세요 저는 파이썬 코딩 도장 학생입니다')
+
+    james = Student()
+    james.greeting()
+
+    class Person:
+        def greeting(self):
+            print('안녕하세요')
+
+    class university:
+        def manage_credit(self):
+            print('학점 관리')
+
+    class Undergraduate(Person, university):
+        def study(self):
+            print('공부하기')
+
+    james = Undergraduate()
+    james.greeting()
+    james.manage_credit()
+    james.study()
+
+    class A:
+        def greeting(self):
+            print('안녕하세요 A입니다')
+
+    class B(A):
+        def greeting(self):
+            print('안녕하세요 B입니다')
+
+    class C(A):
+        def greeting(self):
+            print('안녕하세요 C입니다')
+
+    class D(B, C):
         pass
 
+    x = D()
+    x.greeting()
+    print(D.mro())
 
-class Student(StudentBase):
-    def study(self):
-        print('공부하기')
+    class StudentBase(metaclass=ABCMeta):
+        @abstractmethod
+        def study(self):
+            pass
 
-    def go_to_school(self):
-        print('학교가기')
+        @abstractmethod
+        def go_to_school(self):
+            pass
+
+    class Student(StudentBase):
+        def study(self):
+            print('공부하기')
+
+        def go_to_school(self):
+            print('학교가기')
+
+    james = Student()
+    james.study()
+    james.go_to_school()
+
+    class Point2D:
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
+
+    p1 = Point2D(x=30, y=20)
+    p2 = Point2D(x=60, y=50)
+
+    a = p2.x - p1.x
+    b = p2.y - p1.y
+    print('p1: {} {}'.format(p1.x, p1.y))
+    print('p2: {} {}'.format(p2.x, p2.y))
+
+    c = math.sqrt((a * a) + (b * b))
+    print(c)
 
 
-james = Student()
-james.study()
-james.go_to_school()
+try:
+    x = int(input('나눌 숫자를 입력하세요: '))
+    y = 10 / x
+    print(y)
+except:
+    print('에외가 발생했습니다')
 
+y = [10, 20, 30]
 
-class Point2D:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-
-p1 = Point2D(x=30, y=20)
-p2 = Point2D(x=60, y=50)
-
-a = p2.x - p1.x
-b = p2.y - p1.y
-print('p1: {} {}'.format(p1.x, p1.y))
-print('p2: {} {}'.format(p2.x, p2.y))
-
-c = math.sqrt((a * a) + (b * b))
-print(c)
-
-
+try:
+    index, x = map(int, input('인덱스와 나눌 숫자를 입력하세요(두 개): ').split())
+    print(y[index] / x)
+except ZeroDivisionError as e:
+    print('숫자를 0으로 나눌 수 없습니다.', e)
+except IndexError as e:
+    print('잘못된 인덱스입니다.', e)
