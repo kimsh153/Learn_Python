@@ -948,35 +948,51 @@ def Class():
     print(c)
 
 
-try:
-    x = int(input('나눌 숫자를 입력하세요: '))
-    y = 10 / x
-    print(y)
-except:
-    print('에외가 발생했습니다')
+def Try():
+    try:
+        x = int(input('나눌 숫자를 입력하세요: '))
+        y = 10 / x
+        print(y)
+    except:
+        print('에외가 발생했습니다')
 
-y = [10, 20, 30]
+    y = [10, 20, 30]
 
-try:
-    index, x = map(int, input('인덱스와 나눌 숫자를 입력하세요(두 개): ').split())
-    print(y[index] / x)
-except ZeroDivisionError as e:
-    print('숫자를 0으로 나눌 수 없습니다.', e)
-except IndexError as e:
-    print('잘못된 인덱스입니다.', e)
-try:
-    x = int(input('나눌 숫자를 입력하세요: '))
-    y = 10 / x
-except ZeroDivisionError:
-    print('숫자를 0으로 나눌 수 없습니다')
-else:
-    print(y)
-try:
-    x = int(input('나눌 숫자를 입력하세요: '))
-    y = 10 / x
-except ZeroDivisionError:
-    print('숫자를 0으로 나눌 수 없습니다')
-else:
-    print(y)
-finally:
-    print('코드 실행이 끝났습니다')
+    try:
+        index, x = map(int, input('인덱스와 나눌 숫자를 입력하세요(두 개): ').split())
+        print(y[index] / x)
+    except ZeroDivisionError as e:
+        print('숫자를 0으로 나눌 수 없습니다.', e)
+    except IndexError as e:
+        print('잘못된 인덱스입니다.', e)
+    try:
+        x = int(input('나눌 숫자를 입력하세요: '))
+        y = 10 / x
+    except ZeroDivisionError:
+        print('숫자를 0으로 나눌 수 없습니다')
+    else:
+        print(y)
+    try:
+        x = int(input('나눌 숫자를 입력하세요: '))
+        y = 10 / x
+    except ZeroDivisionError:
+        print('숫자를 0으로 나눌 수 없습니다')
+    else:
+        print(y)
+    finally:
+        print('코드 실행이 끝났습니다')
+
+
+print(dir([1, 2, 3]))
+print([1, 2, 3].__iter__())
+it = [1, 2, 3].__iter__()
+print(it.__next__())
+print(it.__next__())
+print(it.__next__())
+print('Hello, world'.__iter__())
+print({'a': 1, 'b': 2}.__iter__())
+print({1, 2, 3}.__iter__())
+it = range(3).__iter__()
+print(it.__next__())
+print(it.__next__())
+print(it.__next__())
