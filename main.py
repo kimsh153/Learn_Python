@@ -1020,3 +1020,18 @@ a, b, c = Counter(3)
 print(a, b, c)
 a, b, c, d, e = Counter(5)
 print(a, b, c, d, e)
+
+class Counter:
+    def __init__(self, stop):
+        self.stop = stop
+
+    def __getitem__(self, index):
+        if index < self.stop:
+            return index
+        else:
+            raise IndexError
+
+
+for i in Counter(3):
+    print(i, end=' ')
+
