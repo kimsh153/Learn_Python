@@ -3,6 +3,7 @@ import copy
 import pickle
 import math
 from abc import *
+import random
 
 
 # for 별찍기
@@ -996,6 +997,8 @@ it = range(3).__iter__()
 print(it.__next__())
 print(it.__next__())
 print(it.__next__())
+
+
 class Counter:
     def __init__(self, stop):
         self.current = 0
@@ -1021,6 +1024,7 @@ print(a, b, c)
 a, b, c, d, e = Counter(5)
 print(a, b, c, d, e)
 
+
 class Counter:
     def __init__(self, stop):
         self.stop = stop
@@ -1035,3 +1039,26 @@ class Counter:
 for i in Counter(3):
     print(i, end=' ')
 
+it = iter(range(3))
+print(next(it))
+print(next(it))
+print(next(it))
+it = iter(lambda: random.randint(0, 5), 2)
+next(it)
+next(it)
+next(it)
+for i in iter(lambda: random.randint(0, 5), 2):
+    print(i, end=' ')
+
+while True:
+    i = random.randint(0, 5)
+    if i == 2:
+        break
+    print(i, end=' ')
+
+it = iter(range(3))
+print(next(it, 10))
+print(next(it, 10))
+print(next(it, 10))
+print(next(it, 10))
+print(next(it, 10))
