@@ -1095,3 +1095,29 @@ print(b)
 
 c = next(g)
 print(c)
+
+
+def number_generator(stop):
+    n = 0
+    while n < stop:
+        yield n
+        n += 1
+
+
+for i in number_generator(3):
+    print(i)
+
+g = number_generator(3)
+print(next(g))
+print(next(g))
+print(next(g))
+
+
+def upper_generator(x):
+    for i in x:
+        yield i.upper()
+
+
+fruits = ['apple', 'pear', 'grape', 'pineapple', 'orange']
+for i in upper_generator(fruits):
+    print(i)
