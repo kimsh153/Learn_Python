@@ -1,3 +1,4 @@
+# 공부한 곳 출처:파이썬 코딩 도장
 import turtle as t
 import copy
 import pickle
@@ -1044,9 +1045,9 @@ print(next(it))
 print(next(it))
 print(next(it))
 it = iter(lambda: random.randint(0, 5), 2)
-next(it)
-next(it)
-next(it)
+# next(it)
+# next(it)
+# next(it)
 for i in iter(lambda: random.randint(0, 5), 2):
     print(i, end=' ')
 
@@ -1120,4 +1121,43 @@ def upper_generator(x):
 
 fruits = ['apple', 'pear', 'grape', 'pineapple', 'orange']
 for i in upper_generator(fruits):
+    print(i)
+
+
+def number_generator():
+    x = [1, 2, 3]
+    for i in x:
+        yield i
+
+
+for i in number_generator():
+    print(i)
+
+
+def number_generator():
+    x = [1, 2, 3]
+    yield from x
+
+
+for i in number_generator():
+    print(i)
+
+g = number_generator()
+# print(next(g))
+# print(next(g))
+# print(next(g))
+
+
+def number_generator(stop):
+    n = 0
+    while n < stop:
+        yield n
+        n += 1
+
+
+def three_generator():
+    yield from number_generator(3)
+
+
+for i in three_generator():
     print(i)
