@@ -985,179 +985,194 @@ def Try():
         print('코드 실행이 끝났습니다')
 
 
-print(dir([1, 2, 3]))
-print([1, 2, 3].__iter__())
-it = [1, 2, 3].__iter__()
-print(it.__next__())
-print(it.__next__())
-print(it.__next__())
-print('Hello, world'.__iter__())
-print({'a': 1, 'b': 2}.__iter__())
-print({1, 2, 3}.__iter__())
-it = range(3).__iter__()
-print(it.__next__())
-print(it.__next__())
-print(it.__next__())
+# Iterator
+def Iter():
+    print(dir([1, 2, 3]))
+    print([1, 2, 3].__iter__())
+    it = [1, 2, 3].__iter__()
+    print(it.__next__())
+    print(it.__next__())
+    print(it.__next__())
+    print('Hello, world'.__iter__())
+    print({'a': 1, 'b': 2}.__iter__())
+    print({1, 2, 3}.__iter__())
+    it = range(3).__iter__()
+    print(it.__next__())
+    print(it.__next__())
+    print(it.__next__())
+
+    class Counter:
+        def __init__(self, stop):
+            self.current = 0
+            self.stop = stop
+
+        def __iter__(self):
+            return self
+
+        def __next__(self):
+            if self.current < self.stop:
+                r = self.current
+                self.current += 1
+                return r
+            else:
+                raise StopIteration
+
+    for i in Counter(3):
+        print(i, end=' ')
+    print()
+    a, b, c = Counter(3)
+    print(a, b, c)
+    a, b, c, d, e = Counter(5)
+    print(a, b, c, d, e)
+
+    class Counter:
+        def __init__(self, stop):
+            self.stop = stop
+
+        def __getitem__(self, index):
+            if index < self.stop:
+                return index
+            else:
+                raise IndexError
+
+    for i in Counter(3):
+        print(i, end=' ')
+
+    it = iter(range(3))
+    print(next(it))
+    print(next(it))
+    print(next(it))
+    it = iter(lambda: random.randint(0, 5), 2)
+    # next(it)
+    # next(it)
+    # next(it)
+    for i in iter(lambda: random.randint(0, 5), 2):
+        print(i, end=' ')
+
+    while True:
+        i = random.randint(0, 5)
+        if i == 2:
+            break
+        print(i, end=' ')
+
+    it = iter(range(3))
+    print(next(it, 10))
+    print(next(it, 10))
+    print(next(it, 10))
+    print(next(it, 10))
+    print(next(it, 10))
 
 
-class Counter:
-    def __init__(self, stop):
-        self.current = 0
-        self.stop = stop
+# Generator
+def Generator():
+    def number_generator():
+        yield 0
+        yield 1
+        yield 2
 
-    def __iter__(self):
-        return self
+    for i in number_generator():
+        print(i)
+    g = number_generator()
+    print(g)
+    print(g.__next__())
+    print(g.__next__())
+    print(g.__next__())
 
-    def __next__(self):
-        if self.current < self.stop:
-            r = self.current
-            self.current += 1
-            return r
-        else:
-            raise StopIteration
+    def number_generator():
+        yield 0
+        yield 1
+        yield 2
 
+    g = number_generator()
 
-for i in Counter(3):
-    print(i, end=' ')
-print()
-a, b, c = Counter(3)
-print(a, b, c)
-a, b, c, d, e = Counter(5)
-print(a, b, c, d, e)
+    a = next(g)
+    print(a)
 
+    b = next(g)
+    print(b)
 
-class Counter:
-    def __init__(self, stop):
-        self.stop = stop
+    c = next(g)
+    print(c)
 
-    def __getitem__(self, index):
-        if index < self.stop:
-            return index
-        else:
-            raise IndexError
+    def number_generator(stop):
+        n = 0
+        while n < stop:
+            yield n
+            n += 1
 
+    for i in number_generator(3):
+        print(i)
 
-for i in Counter(3):
-    print(i, end=' ')
+    g = number_generator(3)
+    print(next(g))
+    print(next(g))
+    print(next(g))
 
-it = iter(range(3))
-print(next(it))
-print(next(it))
-print(next(it))
-it = iter(lambda: random.randint(0, 5), 2)
-# next(it)
-# next(it)
-# next(it)
-for i in iter(lambda: random.randint(0, 5), 2):
-    print(i, end=' ')
+    def upper_generator(x):
+        for i in x:
+            yield i.upper()
 
-while True:
-    i = random.randint(0, 5)
-    if i == 2:
-        break
-    print(i, end=' ')
+    fruits = ['apple', 'pear', 'grape', 'pineapple', 'orange']
+    for i in upper_generator(fruits):
+        print(i)
 
-it = iter(range(3))
-print(next(it, 10))
-print(next(it, 10))
-print(next(it, 10))
-print(next(it, 10))
-print(next(it, 10))
+    def number_generator():
+        x = [1, 2, 3]
+        for i in x:
+            yield i
 
+    for i in number_generator():
+        print(i)
 
-def number_generator():
-    yield 0
-    yield 1
-    yield 2
+    def number_generator():
+        x = [1, 2, 3]
+        yield from x
 
+    for i in number_generator():
+        print(i)
 
-for i in number_generator():
-    print(i)
-g = number_generator()
-print(g)
-print(g.__next__())
-print(g.__next__())
-print(g.__next__())
+    g = number_generator()
 
+    # print(next(g))
+    # print(next(g))
+    # print(next(g))
 
-def number_generator():
-    yield 0
-    yield 1
-    yield 2
+    def number_generator(stop):
+        n = 0
+        while n < stop:
+            yield n
+            n += 1
 
+    def three_generator():
+        yield from number_generator(3)
 
-g = number_generator()
-
-a = next(g)
-print(a)
-
-b = next(g)
-print(b)
-
-c = next(g)
-print(c)
+    for i in three_generator():
+        print(i)
 
 
-def number_generator(stop):
-    n = 0
-    while n < stop:
-        yield n
-        n += 1
+def add(a, b):
+    c = a + b
+    print(c)
+    print('add 함수')
 
 
-for i in number_generator(3):
-    print(i)
-
-g = number_generator(3)
-print(next(g))
-print(next(g))
-print(next(g))
+def calc():
+    add(1, 2)
+    print('calc 함수')
 
 
-def upper_generator(x):
-    for i in x:
-        yield i.upper()
+calc()
 
 
-fruits = ['apple', 'pear', 'grape', 'pineapple', 'orange']
-for i in upper_generator(fruits):
-    print(i)
+def number_coroutine():
+    while True:
+        x = (yield)
+        print(x)
 
 
-def number_generator():
-    x = [1, 2, 3]
-    for i in x:
-        yield i
+co = number_coroutine()
+next(co)
 
-
-for i in number_generator():
-    print(i)
-
-
-def number_generator():
-    x = [1, 2, 3]
-    yield from x
-
-
-for i in number_generator():
-    print(i)
-
-g = number_generator()
-# print(next(g))
-# print(next(g))
-# print(next(g))
-
-
-def number_generator(stop):
-    n = 0
-    while n < stop:
-        yield n
-        n += 1
-
-
-def three_generator():
-    yield from number_generator(3)
-
-
-for i in three_generator():
-    print(i)
+co.send(1)
+co.send(2)
+co.send(3)
