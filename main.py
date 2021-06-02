@@ -1279,7 +1279,8 @@ def accumulate():
     while True:
         x = (yield)
         if x is None:
-            raise StopIteration(total)  # (파이썬 3.6 이하)
+            # raise StopIteration(total)  # (파이썬 3.6 이하)
+            return total    # (파이썬 3.6 이상)
         total += x
 
 
