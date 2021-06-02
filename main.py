@@ -1245,3 +1245,57 @@ for i in range(20):
     co.send(i)
 
 print(co.throw(RuntimeError, '예외로 코루틴 끝내기'))
+
+
+def accumulate():
+    total = 0
+    while True:
+        x = (yield)
+        if x is None:
+            return total
+        total += x
+
+
+def sum_coroutine():
+    while True:
+        total = yield from accumulate()
+        print(total)
+
+
+co = sum_coroutine()
+next(co)
+
+for i in range(1, 11):
+    co.send(i)
+co.send(None)
+
+for i in range(1, 101):
+    co.send(i)
+co.send(None)
+
+
+def accumulate():
+    total = 0
+    while True:
+        x = (yield)
+        if x is None:
+            raise StopIteration(total)  # (파이썬 3.6 이하)
+        total += x
+
+
+def sum_coroutine():
+    while True:
+        total = yield from accumulate()
+        print(total)
+
+
+co = sum_coroutine()
+next(co)
+
+for i in range(1, 11):
+    co.send(i)
+co.send(None)
+
+for i in range(1, 101):
+    co.send(i)
+co.send(None)
