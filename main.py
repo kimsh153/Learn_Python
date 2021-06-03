@@ -1150,153 +1150,176 @@ def Generator():
         print(i)
 
 
-def add(a, b):
-    c = a + b
-    print(c)
-    print('add 함수')
+# 코루틴
+def coroutine():
+    def add(a, b):
+        c = a + b
+        print(c)
+        print('add 함수')
 
+    def calc():
+        add(1, 2)
+        print('calc 함수')
 
-def calc():
-    add(1, 2)
-    print('calc 함수')
+    calc()
 
+    def number_coroutine():
+        while True:
+            x = (yield)
+            print(x)
 
-calc()
+    co = number_coroutine()
+    next(co)
 
+    co.send(1)
+    co.send(2)
+    co.send(3)
 
-def number_coroutine():
-    while True:
-        x = (yield)
-        print(x)
+    def sum_coroutine():
+        total = 0
+        while True:
+            x = (yield total)
+            total += x
 
+    co = sum_coroutine()
+    print(next(co))
 
-co = number_coroutine()
-next(co)
+    print(co.send(1))
+    print(co.send(2))
+    print(co.send(3))
 
-co.send(1)
-co.send(2)
-co.send(3)
-
-
-def sum_coroutine():
-    total = 0
-    while True:
-        x = (yield total)
-        total += x
-
-
-co = sum_coroutine()
-print(next(co))
-
-print(co.send(1))
-print(co.send(2))
-print(co.send(3))
-
-
-def number_coroutine():
-    while True:
-        x = (yield)
-        print(x, end=' ')
-
-
-co = number_coroutine()
-next(co)
-
-for i in range(20):
-    co.send(i)
-
-co.close()
-
-
-def number_coroutine():
-    try:
+    def number_coroutine():
         while True:
             x = (yield)
             print(x, end=' ')
-    except GeneratorExit:
-        print()
-        print('코루틴 종료')
 
+    co = number_coroutine()
+    next(co)
 
-co = number_coroutine()
-next(co)
+    for i in range(20):
+        co.send(i)
 
-for i in range(20):
-    co.send(i)
+    co.close()
 
-co.close()
+    def number_coroutine():
+        try:
+            while True:
+                x = (yield)
+                print(x, end=' ')
+        except GeneratorExit:
+            print()
+            print('코루틴 종료')
 
+    co = number_coroutine()
+    next(co)
 
-def sum_coroutine():
-    try:
+    for i in range(20):
+        co.send(i)
+
+    co.close()
+
+    def sum_coroutine():
+        try:
+            total = 0
+            while True:
+                x = (yield)
+                total += x
+        except RuntimeError as e:
+            print(e)
+            yield total
+
+    co = sum_coroutine()
+    next(co)
+
+    for i in range(20):
+        co.send(i)
+
+    print(co.throw(RuntimeError, '예외로 코루틴 끝내기'))
+
+    def accumulate():
         total = 0
         while True:
             x = (yield)
+            if x is None:
+                return total
             total += x
-    except RuntimeError as e:
-        print(e)
-        yield total
+
+    def sum_coroutine():
+        while True:
+            total = yield from accumulate()
+            print(total)
+
+    co = sum_coroutine()
+    next(co)
+
+    for i in range(1, 11):
+        co.send(i)
+    co.send(None)
+
+    for i in range(1, 101):
+        co.send(i)
+    co.send(None)
+
+    def accumulate():
+        total = 0
+        while True:
+            x = (yield)
+            if x is None:
+                # raise StopIteration(total)  # (파이썬 3.6 이하)
+                return total  # (파이썬 3.6 이상)
+            total += x
+
+    def sum_coroutine():
+        while True:
+            total = yield from accumulate()
+            print(total)
+
+    co = sum_coroutine()
+    next(co)
+
+    for i in range(1, 11):
+        co.send(i)
+    co.send(None)
+
+    for i in range(1, 101):
+        co.send(i)
+    co.send(None)
 
 
-co = sum_coroutine()
-next(co)
-
-for i in range(20):
-    co.send(i)
-
-print(co.throw(RuntimeError, '예외로 코루틴 끝내기'))
+def hello():
+    print('hello 함수 시작')
+    print('hello')
+    print('hello 함수 끝')
 
 
-def accumulate():
-    total = 0
-    while True:
-        x = (yield)
-        if x is None:
-            return total
-        total += x
+def world():
+    print('world 함수 시작')
+    print('world')
+    print('world 함수 끝')
 
 
-def sum_coroutine():
-    while True:
-        total = yield from accumulate()
-        print(total)
+hello()
+world()
 
 
-co = sum_coroutine()
-next(co)
+def trace(func):
+    def wrapper():
+        print(func.__name__, '함수 시작')
+        func()
+        print(func.__name__, '함수 끝')
 
-for i in range(1, 11):
-    co.send(i)
-co.send(None)
-
-for i in range(1, 101):
-    co.send(i)
-co.send(None)
+    return wrapper
 
 
-def accumulate():
-    total = 0
-    while True:
-        x = (yield)
-        if x is None:
-            # raise StopIteration(total)  # (파이썬 3.6 이하)
-            return total    # (파이썬 3.6 이상)
-        total += x
+@trace
+def hello():
+    print('hello')
 
 
-def sum_coroutine():
-    while True:
-        total = yield from accumulate()
-        print(total)
+@trace
+def world():
+    print('world')
 
 
-co = sum_coroutine()
-next(co)
-
-for i in range(1, 11):
-    co.send(i)
-co.send(None)
-
-for i in range(1, 101):
-    co.send(i)
-co.send(None)
+hello()
+world()
