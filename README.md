@@ -189,6 +189,7 @@ a,b = input('문자열 두개를 입력하세요').split() # 공백을 기준으
 print(a) # hello
 print(b) # python
 ```
+---
 ### 불과 비교 연산자
 #### 불은 참 또는 거짓을 나타냅니다
 ```python
@@ -202,7 +203,7 @@ print(3 < 1) # False
 print(3 <= 3) # True
 print(3 >= 4) # False
 ```
-* 다양한 비교 연산자
+#### 다양한 비교 연산자
 ```python
 print(3 == 3) # True
 ```
@@ -213,13 +214,35 @@ print(3 != 3) # False
 print('python' == 'python') # True
 print('Python' == 'python') # False
 ```
-* is, is not은 객체가 같은지를 비교합니다
+#### is, is not은 객체가 같은지를 비교합니다
 ```python
 print(3 == 3.0) # 값이 같아서 True 
 print(3 is 3.0) # 객체가 달라서 False
+print(1 is not 1.0) # not에 객체가 달라서 True
 ```
 * 객체의 차이 아는법(id(값))
 ```python
 print(id(1)) # 12345678 <- 파이썬을 실행할때마다 달라짐
 print(id(1.0)) # 4315123647 <- 파이썬을 실행할때마다 달라짐
+```
+### 논리연산자
+#### 논리 연산자는 and, or, not 이 있습니다
+#### and 연산자는 두 값이 모두 참이여야 참입니다
+```python
+print(True and True) # True
+print(True and False) # False
+print(False and True) # False
+print(False and False) # False
+```
+#### or 연산자는 두 값중 하나만 참이여도 참입니다
+```python
+print(True and True) # True
+print(True and False) # True
+print(False and True) # True
+print(False and False) # False
+```
+#### not 연산자는 참이면 거짓 거짓이면 참입니다
+```python
+print(not True) # False
+print(not False) # True
 ```
