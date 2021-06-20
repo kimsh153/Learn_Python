@@ -225,6 +225,7 @@ print(1 is not 1.0) # not에 객체가 달라서 True
 print(id(1)) # 12345678 <- 파이썬을 실행할때마다 달라짐
 print(id(1.0)) # 4315123647 <- 파이썬을 실행할때마다 달라짐
 ```
+---
 ### 논리연산자
 #### 논리 연산자는 and, or, not 이 있습니다
 #### and 연산자는 두 값이 모두 참이여야 참입니다
@@ -245,4 +246,45 @@ print(False and False) # False
 ```python
 print(not True) # False
 print(not False) # True
+```
+### 문자열
+#### 변수에 문자열 저장해서 출력하기
+```python
+hello = 'Hello, world!'
+print(hello) # Hello, world!
+hi = '안녕하세요'
+print(hi) # 안녕하세요
+```
+* 문자열을 나타날 때 (''')로 묶거나 (""")로 묶을 수도 있습니다
+```python
+hello = '''Hello, world!'''
+print(hello) # Hello, world!
+python = """Hello, python"""
+print(python) # Hello, python
+```
+#### 문자열을 어려줄로 쓸 때 (''')랑 (""")를 사용합니다
+```python 
+hello = '''Hello, world!
+안녕하세요
+python입니다'''
+print(hello) # Hello, world!
+             # 안녕하세요
+             # python입니다
+```
+> 또는 (\n)을 이용해서 줄 바꿈을 할 수 있습니다
+```python
+print('Hello\nPython') # Hello
+                       # Python
+```
+#### 문자열 안에 (')와 (")포함시키기
+```python
+hello = "Python isn't difficult"
+print(hello) # Python isn't difficult
+python = 'He said "Python is easy"'
+print(python) # He said "Python is easy"
+```
+> 또는 ('\\')를 사용해서 (',")를 붙힐 수 있습니다
+```python
+hello = 'Python isn\'t difficult'
+print(hello) # Python isn't difficult'
 ```
