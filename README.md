@@ -247,6 +247,7 @@ print(False and False) # False
 print(not True) # False
 print(not False) # True
 ```
+---
 ### 문자열
 #### 변수에 문자열 저장해서 출력하기
 ```python
@@ -255,14 +256,14 @@ print(hello) # Hello, world!
 hi = '안녕하세요'
 print(hi) # 안녕하세요
 ```
-* 문자열을 나타날 때 (''')로 묶거나 (""")로 묶을 수도 있습니다
+* 문자열을 나타날 때 ( ''' )로 묶거나 ( """ )로 묶을 수도 있습니다
 ```python
 hello = '''Hello, world!'''
 print(hello) # Hello, world!
 python = """Hello, python"""
 print(python) # Hello, python
 ```
-#### 문자열을 어려줄로 쓸 때 (''')랑 (""")를 사용합니다
+#### 문자열을 어려줄로 쓸 때 ( ''' )랑 ( """ )를 사용합니다
 ```python 
 hello = '''Hello, world!
 안녕하세요
@@ -271,20 +272,52 @@ print(hello) # Hello, world!
              # 안녕하세요
              # python입니다
 ```
-> 또는 (\n)을 이용해서 줄 바꿈을 할 수 있습니다
+> 또는 ( \n )을 이용해서 줄 바꿈을 할 수 있습니다
 ```python
 print('Hello\nPython') # Hello
                        # Python
 ```
-#### 문자열 안에 (')와 (")포함시키기
+#### 문자열 안에 ( ' )와 ( " )포함시키기
 ```python
 hello = "Python isn't difficult"
 print(hello) # Python isn't difficult
 python = 'He said "Python is easy"'
 print(python) # He said "Python is easy"
 ```
-> 또는 ('\\')를 사용해서 (',")를 붙힐 수 있습니다
+> 또는 ( \\ )를 사용해서 ( ' , " )를 붙힐 수 있습니다
 ```python
 hello = 'Python isn\'t difficult'
 print(hello) # Python isn't difficult'
+```
+---
+### 리스트
+#### 리스트엔 여러가지 자료형을 저장할 수 있습니다
+```python
+a = [10, 20, 30, 40, 50]
+print(a) # [10, 20, 30, 40, 50]
+person = ['james', 17, 175.3, True]
+print(person) # ['james', 17, 175.3, True]
+```
+* 빈 리스트를 만들 때는 []또는 list를 사용할 수 있습니다
+```python
+a = []
+print(a) # []
+b = list()
+print(b) # []
+```
+#### range를 사용하여 리스트 만들기
+* range는 연속된 숫자를 생성합니다
+```python
+print(range(10)) # range(0, 10)
+a = list(range(10))
+print(a) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+b = list(range(5, 12))
+print(b) # [5, 6, 7, 8, 9, 10, 11]
+```
+* range(시작, 끝, 증가량)
+```python
+c = list(range(-4, 10, 2))
+print(c) # [-4, -2, 0, 2, 4, 6, 8]
+d = list(range(10, 0, -1))
+print(d) # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 ```
