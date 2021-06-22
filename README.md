@@ -335,7 +335,7 @@ print(person) # ('james', 17, 175.3, True)
 * 튜플은 요소가 절대 변경 되지 않고 유지되어야 할 때 사용합니다
 #### range를 사용하여 튜플 만들기
 ```python
-a = tuple(range(!0))
+a = tuple(range(10))
 print(a) # (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 b = tuple(range(5, 12))
 print(b) # (5, 6, 7, 8, 9, 10, 11)
