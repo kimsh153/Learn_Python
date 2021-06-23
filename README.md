@@ -287,7 +287,7 @@ print(python) # He said "Python is easy"
 > 또는 ( \\ )를 사용해서 ( ' , " )를 붙힐 수 있습니다
 ```python
 hello = 'Python isn\'t difficult'
-print(hello) # Python isn't difficult'
+print(hello) # Python isn't difficult
 ```
 ---
 ### 리스트
@@ -352,7 +352,26 @@ print(c) # (-4, -2, 0, 2, 4, 6, 8)
 a = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
 print(30 in a) # True
 print(100 in a) # False
+print(100 not in a) # True
+print(30 not in a) # False
+print(43 in (38, 76, 43, 62, 19) # True
+print(1 in range(10)) # True
+print('P' in 'Hello, Python') # True
 ```
-
+#### 시퀀스 객체 연결은 + 로 할 수 있습니다
+```python
+a = [0, 10, 20, 30]
+b = [9, 8, 7, 6]
+print(a + b) # [0, 10, 20, 30, 80, 9, 8, 7, 6]
+```
+* range끼리는 리스트 또는 튜플을 사용해서 연결할 수 있습니다
+```python
+print(list(range(0, 10)) + list(range(10, 20))) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+print(tuple(range(0, 10)) + tuple(range(10, 20))) # (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19)
+```
+* 문자열 끼리 + 로 연결할 수 있습니다
+```python
+print('Hello, ' + 'world!') # Hello, world!
+```
 
 ##### 정리 출처 : 코딩도장
