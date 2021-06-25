@@ -373,5 +373,6 @@ print(tuple(range(0, 10)) + tuple(range(10, 20))) # (0, 1, 2, 3, 4, 5, 6, 7, 8, 
 ```python
 print('Hello, ' + 'world!') # Hello, world!
 ```
+### 딕셔너리
 
 ##### 정리 출처 : 코딩도장
