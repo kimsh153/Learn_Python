@@ -373,6 +373,16 @@ print(tuple(range(0, 10)) + tuple(range(10, 20))) # (0, 1, 2, 3, 4, 5, 6, 7, 8, 
 ```python
 print('Hello, ' + 'world!') # Hello, world!
 ```
+#### 시퀀스 객체를 * 로 반복할 수 있습니다
+```python
+print([0, 10, 20] * 3) # [0, 10, 20, 0, 10, 20, 0, 10, 20]
+print(list(range(0, 5, 2)) * 3) # [0, 2, 4, 0, 2, 4, 0, 2, 4]
+print(tuple(range(0, 5, 2)) * 3) # (0, 2, 4, 0, 2, 4, 0, 2, 4)
+```
+* 문자열 끼리 * 로 반복할 수 있습니다
+```python
+print('Hello, ' * 3) # Hello, Hello, Hello, 
+```
 ### 딕셔너리
 
 ##### 정리 출처 : 코딩도장
