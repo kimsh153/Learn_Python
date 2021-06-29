@@ -400,6 +400,34 @@ print(len(range(0, 10, 2))) # 5
 hello = 'Hello, world!'
 print(len(hello)) # 13
 ```
+#### 시퀀스객체에 []을 붙여 객체안의 요소를 확인할 수 있습니다
+```python
+a = [38, 21, 53, 62, 19]
+print(a[0]) # 38
+print(a[2]) # 53
+```
+* 인덱스는 요소의 순서입니다
+* []안에 인덱스를 넣어서 확인 가능합니다
+#### range로 만든 객체도 인덱스로 확인할 수 있습니다
+```python
+r = range(0, 10, 2)
+print(r[2]) # 4
+```
+#### 문자열도 인덱스로 문자를 확인할 수 있습니다
+```python
+hello = 'Hello, world!'
+print(hello[7]) # w
+```
+#### 음수 인덱스 지정하기
+```python
+a = [38, 21, 53, 62, 19]
+print(a[-1]) # 19
+print(a[-5]) # 38
+r = range(0, 10, 2)
+print(r[-3]) # 4
+hello = 'hello, world!'
+print(hello[-4]) # r
+```
 ### 딕셔너리
 
 ##### 정리 출처 : 코딩도장
