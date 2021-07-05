@@ -527,4 +527,16 @@ print(lux) # {'health': 490, 'mana':334, 'melee':550, 'armor': 18.72}
 lux = {'health': 490, 'health':800, 'mana':334, 'melee':550, 'armor': 18.72}
 print(lux) # {'health': 800, 'mana':334, 'melee':550, 'armor': 18.72}
 ```
+#### 딕셔너리의 키는 정수,실수,불,문자열이 사용가능하고 값은 모든 자료형이 사용 가능합니다
+```python
+x = {100: 'hundred', False: 0, 3.5: [3.5, 3.5]}
+print(x) # {100: 'hundred', False: 0, 3.5: [3.5, 3.5]}
+```
+#### 빈 딕셔너리를 만들 수 있습니다
+```python
+a = {}
+print(a) # {}
+b = dict()
+print(y) # {}
+```
 ##### 정리 출처 : 코딩도장
