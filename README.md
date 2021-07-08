@@ -506,7 +506,7 @@ print(c) # [0, 10, 'a', 'b', 'c', 'd', 'e', 50, 60, 70, 80, 90]
 d[2:8:2] = ['a', 'b', 'c']
 print(d) # [0, 10, 'a', 30, 'b', 50, 'c', 70, 80, 90]
 ```
-#### 슬라이스를 삭제하려면 del를 사용합니다
+#### 슬라이스를 삭제하려면 (del)를 사용합니다
 ```python
 a = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
 del a[2:5]
@@ -515,17 +515,18 @@ b = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
 del b[2:8:2]
 print(b) # [0, 10 20, 30, 50, 70, 80, 90]
 ```
+---
 ### 딕셔너리
 #### 딕셔너리는 키와 값으로 구분이 됩니다
 * 딕셔너리를 만들때는 키:값으로 씁니다
 ```python
-lux = {'health': 490, 'mana':334, 'melee':550, 'armor': 18.72}
-print(lux) # {'health': 490, 'mana':334, 'melee':550, 'armor': 18.72}
+animals = {'dog': 4, 'cat':3, 'giraffe':5, 'mouse': 1.0}
+print(animals) # {'dog': 4, 'cat':3, 'giraffe':5, 'mouse': 1.0}
 ```
 #### 딕셔너리의 키가 중복이되면 뒤에있는 키가 저장이 됩니다
 ```python
-lux = {'health': 490, 'health':800, 'mana':334, 'melee':550, 'armor': 18.72}
-print(lux) # {'health': 800, 'mana':334, 'melee':550, 'armor': 18.72}
+animals = {'dog': 4, 'dog': 5, 'cat':3, 'giraffe':5, 'mouse': 1.0}
+print(animals) # {'dog': 5, 'cat':3, 'giraffe':5, 'mouse': 1.0}
 ```
 #### 딕셔너리의 키는 정수,실수,불,문자열이 사용가능하고 값은 모든 자료형이 사용 가능합니다
 ```python
@@ -539,19 +540,42 @@ print(a) # {}
 b = dict()
 print(b) # {}
 ```
-#### dict는 키=값형식으로 딕셔너리를 만듭니다 값을 넣을땐 ' '," "는 빼고 만듭니다
+#### dict는 키=값형식으로 딕셔너리를 만듭니다 값을 넣을땐 (' '), (" ")는 빼고 만듭니다
 ```python
-lux1 = dict(health=490, mana=334, melee=550, armor=18.72)
-print(lux1) # {'health': 490, 'mana': 334, 'melee': 550, 'armor': 18.72}
+animals = dict(dog=4, cat=3, giraffe=5, mouse=1.0)
+print(animals) # {'dog': 4, 'cat':3, 'giraffe':5, 'mouse': 1.0}
 ```
 #### zip은 키와 값을 순서에 맞게 묶습니다
 ```python
-lux2=dict(zip(['health', 'mana', 'melee', 'armor'], [490, 334, 550, 18.72]))
-print(lux2) # {'health': 490, 'mana': 334, 'melee': 550, 'armor': 18.72}
+animals = dict(zip(['dog', 'cat', 'giraffe', 'mouse'], [4, 3, 5, 1.0]))
+print(animals) # {'dog': 4, 'cat':3, 'giraffe':5, 'mouse': 1.0}
 ```
 * 리스트안에 튜플 나열하기
 ```python
-lux3=dict([('health', 490), ('mana', 334), ('melee', 550), ('armor', 18.72)])
-print(lux3) # {'health': 490, 'mana': 334, 'melee': 550, 'armor': 18.72}
+animals = dict([('dog', 4), ('cat', 3), ('giraffe', 5), ('mouse', 1.0)])
+print(animals) # {'dog': 4, 'cat':3, 'giraffe':5, 'mouse': 1.0}
+```
+#### 딕셔너리에 값을 할당하려면 (딕셔너리[키] = 값)형식으로 할당합니다
+```python
+animals = {'dog': 4, 'cat':3, 'giraffe':5, 'mouse': 1.0}
+animals['dog'] = 7
+animals['cat'] = 11
+print(animals) # {'dog': 7, 'cat':11, 'giraffe': 5, 'mouse': 1.0}
+animals['rabbit'] = 4
+print(animals) # {'dog': 7, 'cat':11, 'giraffe': 5, 'mouse': 1.0, 'rabbit': 4}
+```
+#### 딕셔너리에 키가 있는지 확인하는법은 (print('키' in 딕셔너리)) 입니다
+```python
+animals = {'dog': 4, 'cat':3, 'giraffe':5, 'mouse': 1.0}
+print('dog' in animals) # True
+print('bear' in animals) # False
+print('bear' not in animals) # True
+print('dog' not in animals) # False
+```
+#### 딕셔너리의 키의 개수를 보려면 (len)을 사용합니다
+```python
+animals = {'dog': 4, 'cat':3, 'giraffe':5, 'mouse': 1.0}
+print(len(animals)) # 4
+print(len({'dog': 4, 'cat':3, 'giraffe':5, 'mouse': 1.0})) # 4
 ```
 ##### 정리 출처 : 코딩도장
