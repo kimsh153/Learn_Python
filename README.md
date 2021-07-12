@@ -619,4 +619,15 @@ if x == 20:
     print('x는 20입니다') # 실행x
 ```
 ---
-##### 정리 출처 : 코딩도장
+### else
+#### else는 if조건문이 참이 아니면 실행하는 조건문입니다
+```python
+x = 5
+if x == 10:
+    print('x는 10입니다') # 실행x
+else:
+    print('x는 10이 아닙니다') # x는 10이 아닙니다
+```
+* if조건문이 참이 아니여서 else문이 실행이 됐습니다
+
+#### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
