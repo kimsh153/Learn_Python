@@ -658,4 +658,20 @@ if '':
 else:
     print('거짓') # 거짓
 ```
+#### if조건문에도 사용가능한 논리 연산자
+```python
+x = 10
+y = 20
+
+if x == 10 and y == 20:
+    print('참') # 참
+else:
+    print('거짓') # 실행x
+a = 10
+b = 10
+if a == 10 or b == 20:
+    print('참') # 참
+else:
+    print('거짓') # 실행x
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
