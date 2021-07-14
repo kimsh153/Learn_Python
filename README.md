@@ -635,10 +635,12 @@ if None:
     print('참') # 실행x
 else:
     print('거짓') # 거짓
+    
 if 0:
     print('참') # 실행x
 else:
     print('거짓') # 거짓
+    
 if 1:
     print('참') # 참
 else:
@@ -650,6 +652,7 @@ if 'wow':
     print('참') # 참
 else:
     print('거짓') # 실행x
+    
 if '':
     print('참') # 실행x
 else:
