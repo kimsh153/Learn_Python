@@ -629,5 +629,30 @@ else:
     print('x는 10이 아닙니다') # x는 10이 아닙니다
 ```
 * if조건문이 참이 아니여서 else문이 실행이 됐습니다
-
+#### if조건문의 None은 False로 간주합니다 그리고 '0'이외의 모든 수는 참입니다
+```python
+if None:
+    print('참') # 실행x
+else:
+    print('거짓') # 거짓
+if 0:
+    print('참') # 실행x
+else:
+    print('거짓') # 거짓
+if 1:
+    print('참') # 참
+else:
+    print('거짓') # 실행x
+```
+#### if조건문의 빈 문자열은 거짓입니다
+```python
+if 'wow':
+    print('참') # 참
+else:
+    print('거짓') # 실행x
+if '':
+    print('참') # 실행x
+else:
+    print('거짓') # 거짓
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
