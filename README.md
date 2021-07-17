@@ -674,6 +674,7 @@ if a == 10 or b == 20:
 else:
     print('거짓') # 실행x
 ```
+---
 ### elif
 #### elif조건문은 else if의 뜻이며 if문이 참이 아닐때 아래에 있는 elif조건문을 확인합니다
 ```python
