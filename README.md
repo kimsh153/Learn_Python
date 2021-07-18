@@ -691,4 +691,11 @@ elif y == 20:
     print('y는 20입니다') # 실행x
 ```
 * if문이 참이라면 아래있는 elif문은 컴파일하지 않고 넘어갑니다 그리고 elif문이 참이라면 그 아래있는 elif문을 넘어갑니다
+---
+### for 
+#### for는 반복문으로 반복되는 실행을 해줍니다 
+```python
+for i in range(10):
+    print('hello ') # hello hello hello hello hello hello hello hello hello hello 
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
