@@ -695,7 +695,36 @@ elif y == 20:
 ### for 
 #### for는 반복문으로 반복되는 실행을 해줍니다 
 ```python
-for i in range(10):
-    print('hello ') # hello hello hello hello hello hello hello hello hello hello 
+for i in range(5):
+    print('hello') # hello
+                   # hello
+                   # hello
+                   # hello
+                   # hello
+                   
+for i in range(5):
+    print('hello', i) # hello 0
+                      # hello 1
+                      # hello 2
+                      # hello 3
+                      # hello 4
+```
+#### for문에 range(시작값, 끝값)을 정할 수 있습니다
+```python
+for i in range(5, 10):
+    print('hello', i) # hello 5
+                      # hello 6
+                      # hello 7
+                      # hello 8
+                      # hello 9
+```
+#### for문에 range(시작값, 끝값, 증가값)을 정할 수 있습니다
+```python
+for i in range(0, 10, 2):
+    print('hello', i) # hello 0
+                      # hello 2
+                      # hello 4
+                      # hello 6
+                      # hello 8
 ```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
