@@ -727,4 +727,20 @@ for i in range(0, 10, 2):
                       # hello 6
                       # hello 8
 ```
+#### reversed는 range의 숫자의 순서를 반대로 뒤집을 수 있습니다
+```python
+for i in reversed(range(5)):
+    print('hello', i) # hello 4
+                      # hello 3
+                      # hello 2
+                      # hello 1
+                      # hello 0
+```
+#### range를 응용해서 입력한 값 만큼 반복하는 for문 만들기
+```python
+cnt = int(input('반복할 횟수를 입력하세요: '))
+
+for i in range(cnt):
+    print('hello', cnt)
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
