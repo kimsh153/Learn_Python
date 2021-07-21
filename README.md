@@ -743,4 +743,21 @@ cnt = int(input('반복할 횟수를 입력하세요: '))
 for i in range(cnt):
     print('hello', cnt)
 ```
+#### for문에 range대신 리스트를 넣으면 리스트의 요소를 꺼내면서 반복합니다
+```python
+a = [10, 20, 30, 40, 50]
+for i in a:
+    print(i)
+```
+#### 튜플도 마찬가지로 튜플의 요소를 꺼내면서 반복합니다
+```python
+animals = ('cat', 'dog', 'mouse')
+for animal in animals:
+    print(animal)
+```
+#### 문자열도 시퀀스 객체이므로 for문으로 한글자씩 빼낼 수 있습니다
+```python
+for letter in 'Python':
+    print(letter, end=' ')
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
