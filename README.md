@@ -760,4 +760,17 @@ for animal in animals:
 for letter in 'Python':
     print(letter, end=' ')
 ```
+---
+### while
+#### while도 for와 비슷한 반복문입니다
+```python
+i = 0
+while i < 100:
+    print('hello')
+    i += 1
+```
+> i = 0 <- 초기식
+> i < 100 <- 조건식
+> print('hello') <- 반복할 코드
+> i += 1 <- 변화식
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
