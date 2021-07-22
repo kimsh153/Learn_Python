@@ -770,7 +770,10 @@ while i < 100:
     i += 1
 ```
 > i = 0 <- 초기식
+
 > i < 100 <- 조건식
+
 > print('hello') <- 반복할 코드
+
 > i += 1 <- 변화식
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
