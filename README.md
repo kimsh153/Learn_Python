@@ -770,10 +770,25 @@ while i < 100:
     i += 1
 ```
 > i = 0 <- 초기식
-
+>
 > i < 100 <- 조건식
-
+>
 > print('hello') <- 반복할 코드
-
+>
 > i += 1 <- 변화식
+#### random모듈을 이용하여 while반복문의 반복 횟수를 정하지 않고 반복하기
+```python
+import random
+random.randint(1, 6)
+
+i = 0
+while i != 3:
+    i = random.randint(1, 6)
+    print(i)
+```
+> random.randint(1, 6) <- 1과 6사이의 난수를 생성
+> 
+> while i != 3 <- i가 3이 아닐때까지 반복하기
+
+while 반복문은 반복 횟수가 정해져 있지 않을 때 유용합니다
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
