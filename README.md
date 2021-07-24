@@ -790,5 +790,16 @@ while i != 3:
 > 
 > while i != 3 <- i가 3이 아닐때까지 반복하기
 
-while 반복문은 반복 횟수가 정해져 있지 않을 때 유용합니다
+* while 반복문은 반복 횟수가 정해져 있지 않을 때 유용합니다
+
+### break, continue
+#### break를 사용하여 반복문을 끝내기
+```python
+i = 0
+while True:
+    print(i)
+    i += 1
+    if i == 10:
+        break
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
