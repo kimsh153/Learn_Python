@@ -802,4 +802,19 @@ while True:
     if i == 10:
         break
 ```
+> if i == 10: <- 만약 i가 10이라면
+>
+> break <- 반복문 끝내기
+
+#### continue를 사용하여 다음 코드 건너뛰기
+```python
+for i in range(100):
+    if i % 3 == 0:
+        continue
+    print(i)
+```
+> if i % 3 == 0: <- 만약 i가 3으로 나눈 나머지가 0이라면
+>
+> continue <- 다음 코드 건너뛰기
+
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
