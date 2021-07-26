@@ -816,5 +816,13 @@ for i in range(100):
 > if i % 3 == 0: <- 만약 i가 3으로 나눈 나머지가 0이라면
 >
 > continue <- 다음 코드 건너뛰기
-
+---
+### 별 출력
+#### 이중for문을 이용하여 계단식 별 출력하기
+```python
+for i in range(5):
+    for j in range(i + 1):
+        print('*', end='')
+    print()
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
