@@ -868,4 +868,23 @@ for i in a:
 > for i in a <- [10, 20] 리스트를 꺼냄
 >
 > for j in i <- [10], [20] 리스트를 꺼냄
+* for문과 range를 사용하여 2차원 리스트의 요소 꺼내기
+```python
+a = [[10, 20], [30, 40], [50, 60]]
+
+for i in range(len(a)):           # 세로 크기
+    for j in range(len(a[i])):    # 가로 크기
+        print(a[i][j], end=' ')
+    print()
+```
+#### while을 이용하여 2차원 리스트의 요소 꺼내기
+```python
+a = [[10, 20], [30, 40], [50, 60]]
+
+i = 0
+while i < len(a):
+    x, y = a[i]
+    print(x, y)
+    i += 1
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
