@@ -864,7 +864,7 @@ for i in a:
 > 30 40
 >
 > 50 60
->
+
 > for i in a <- [10, 20] 리스트를 꺼냄
 >
 > for j in i <- [10], [20] 리스트를 꺼냄
@@ -887,4 +887,27 @@ while i < len(a):
     print(x, y)
     i += 1
 ```
+#### for반복문으로 1차원 리스트 만들기
+```python
+a = []
+for i in range(10):
+    a.append(0) # append로 요소 추가
+print(a) # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+```
+#### for반복문으로 2차원 리스트 만들기
+```python
+a = []
+
+for i in range(3):
+    line = []
+    for j in range(2):
+        line.append(0)
+    a.append(line)
+print(a) # [[0, 0], [0, 0], [0, 0]]
+```
+> line = [] <- 안쪽 리스트로 사용할 빈 리스트 만들기
+>
+> line.append(0) <- 안쪽 리스트에 0 추가
+>
+> a.append(line) <- 전체 리스트에 안쪽 리스트를 추가
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
