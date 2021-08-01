@@ -925,4 +925,20 @@ print(a) # [[0, 0], [0, 0], [0, 0]]
 a = [[0 for j in range(2)] for i in range(3)]
 print(a) # [[0, 0], [0, 0], [0, 0]] 
 ```
+#### 2차원 톱니형 리스트 만들기
+```python
+a = [3, 1, 3, 2, 5] # 가로 크기를 지정한 리스트
+b = []
+
+for i in a:
+    line = []
+    for j in range(i):
+        line.append(0)
+    b.append(line)
+    
+print(b) # [[0, 0, 0], [0], [0, 0, 0], [0, 0], [0, 0, 0, 0, 0]]
+```
+> for i in a: <- 리스트의 크기만큼 반복
+>
+> for j in range(i): <- a리스트의 숫자만큼 반복
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
