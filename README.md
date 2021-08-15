@@ -1118,4 +1118,17 @@ b[0][0] = 500
 print(a) # [[10, 20], [30, 40]]
 print(b) # [[500, 20], [30, 40]]
 ```
+---
+### 문자열 응용하기
+#### 문자열 바꾸기
+```python
+s = 'Hello, world!'
+s = s.replace('world!', 'Python')
+print(s) # 'Hello, Python'
+```
+#### 문자 바꾸기
+```python
+table = str.maketrans('aeiou', '12345')
+print('apple'.translate(table)) # '1ppl2'
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
