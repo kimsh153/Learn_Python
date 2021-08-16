@@ -1131,4 +1131,12 @@ print(s) # 'Hello, Python'
 table = str.maketrans('aeiou', '12345')
 print('apple'.translate(table)) # '1ppl2'
 ```
+#### 문자열 분리하기
+```python
+print('apple pear grape pineapple orange'.split()) # ['apple', 'pear', 'grape', 'pineapple', 'orange']
+```
+```python
+print('apple, pear, grape, pineapple, orange'.split(', ')) # ['apple', 'pear', 'grape', 'pineapple', 'orange']
+```
+* split()는 공백은 기준으로 문자열을 분리하여 리스트를 만듭니다
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
