@@ -1139,4 +1139,14 @@ print('apple pear grape pineapple orange'.split()) # ['apple', 'pear', 'grape', 
 print('apple, pear, grape, pineapple, orange'.split(', ')) # ['apple', 'pear', 'grape', 'pineapple', 'orange']
 ```
 * split()는 공백은 기준으로 문자열을 분리하여 리스트를 만듭니다
+#### 구분자 문자열과 문자열 리스트 연결하기
+```python
+print(' '.join(['apple', 'pear', 'grape', 'pineapple', 'orange'])) 
+# 'apple pear grape pineapple orange'
+```
+* join은 구분자 문자열과 문자열 리스트의 요소를 연결하여 문자열로 만듭니다
+```python
+print('-'.join(['apple', 'pear', 'grape', 'pineapple', 'orange']))
+# 'apple-pear-grape-pineapple-orange'
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
