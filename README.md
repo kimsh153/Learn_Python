@@ -1149,4 +1149,16 @@ print(' '.join(['apple', 'pear', 'grape', 'pineapple', 'orange']))
 print('-'.join(['apple', 'pear', 'grape', 'pineapple', 'orange']))
 # 'apple-pear-grape-pineapple-orange'
 ```
+#### 문자열의 소문자를 대문자로 바꾸기
+```python
+print('python'.upper())
+# 'PYTHON'
+```
+* upper()는 문자열의 문자를 모두 대문자로 바꿉니다. 만약 문자열 안에 대문자가 있다면 그대로 유지됩니다. 
+#### 문자열의 대문자를 소문자로 바꾸기
+```python
+print('PYTHON'.lower())
+# 'python'
+```
+* lower()는 문자열의 문자를 모두 소문자로 바꿉니다. 만약 문자열 안에 소문자가 있다면 그대로 유지됩니다.
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
