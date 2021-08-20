@@ -1161,4 +1161,9 @@ print('PYTHON'.lower())
 # 'python'
 ```
 * lower()는 문자열의 문자를 모두 소문자로 바꿉니다. 만약 문자열 안에 소문자가 있다면 그대로 유지됩니다.
+#### 문자열의 왼쪽 공백 삭제하기
+```python
+print('    Python    '.lstrip())
+# 'Python    '
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
