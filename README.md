@@ -1171,4 +1171,11 @@ print('    Python    '.lstrip())
 print('    Python    '.rstrip())
 # '    Python'
 ```
+#### 양쪽 공백 삭제하기
+```python
+print('    Python    '.strip())
+# 'Python'
+```
+#### ', python.'.lstrip(',.')
+# ' python.'
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
