@@ -1166,4 +1166,9 @@ print('PYTHON'.lower())
 print('    Python    '.lstrip())
 # 'Python    '
 ```
+#### 문자열의 오른쪽 공백 삭제하기
+```python
+print('    Python    '.rstrip())
+# '    Python'
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
