@@ -1176,6 +1176,19 @@ print('    Python    '.rstrip())
 print('    Python    '.strip())
 # 'Python'
 ```
-#### ', python.'.lstrip(',.')
+#### 왼쪽의 특정 문자 삭제하기
+```python
+', python.'.lstrip(', .')
 # ' python.'
+```
+#### 오른쪽의 특정 문자 삭제하기
+```python
+', python.'.rstrip(',.')
+# ', python'
+```
+#### 양쪽의 특정 문자 삭제하기
+```python
+', python.'.strip(',.')
+# ' python'
+```
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
