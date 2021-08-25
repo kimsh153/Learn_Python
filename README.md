@@ -1192,7 +1192,7 @@ print('    Python    '.strip())
 # ' python'
 ```
 #### 문자열을 왼쪽으로 정렬하기
-```
+```python
 'python'.ljust(10)
 # 'python    '
 ```
