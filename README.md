@@ -1196,5 +1196,12 @@ print('    Python    '.strip())
 'python'.ljust(10)
 # 'python    '
 ```
-* ljust(길이)는 문자열을 지정된 길이로 만든 뒤 남은 공간은 공백으로 채웁니다.
+* ljust(길이)는 문자열을 지정된 길이로 만든 뒤 남은 공간은 왼쪽에서부터 공백으로 채웁니다.
+#### 문자열을 오른쪽으로 정렬하기
+```python
+'python'.rjust(10)
+# '    python'
+```
+* rjust(길이)는 문자열을 지정된 길이로 만든 뒤 남은 공간은 오른쪽에서부터 공백으로 채웁니다.
+
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
