@@ -1211,4 +1211,11 @@ print('    Python    '.strip())
 # '   python  '
 ```
 * 만약 가운데 정렬했을 때 전체 길이와 남은 공간이 모두 홀수가 된다면 왼쪽에 공백이 한 칸 더 들어갑니다.
+#### 매서드 체이닝
+##### 매서드 체이닝은 매서드를 줄줄이 연결하는 것 입니다.
+```python
+'python'.rjust(10).upper()
+# '    PYTHON'
+```
+* input().split()도 input()이 반환한 문자열에 split을 호출하는 매서드 체이닝입니다.
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
