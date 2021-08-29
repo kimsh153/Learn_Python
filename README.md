@@ -1203,5 +1203,12 @@ print('    Python    '.strip())
 # '    python'
 ```
 * rjust(길이)는 문자열을 지정된 길이로 만든 뒤 남은 공간은 오른쪽에서부터 공백으로 채웁니다.
-
+#### 문자열을 가운데 정렬하기
+```python
+'python'.center(10)
+# '  python  '
+'python'.center(11)
+# '   python  '
+```
+* 만약 가운데 정렬했을 때 전체 길이와 남은 공간이 모두 홀수가 된다면 왼쪽에 공백이 한 칸 더 들어갑니다.
 #### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
