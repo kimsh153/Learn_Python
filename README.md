@@ -1217,5 +1217,21 @@ print('    Python    '.strip())
 'python'.rjust(10).upper()
 # '    PYTHON'
 ```
-* input().split()도 input()이 반환한 문자열에 split을 호출하는 매서드 체이닝입니다.
-#### 참고 : 코딩도장(https://dojang.io/course/view.php?id=7)
+* input().split()도 input()이 반환한 문자열에 split을 호출하는 매서드 체이닝입니다.  
+#### 문자열 왼쪽에 0 채우기
+```python
+print('35'.zfill(4))
+# '0035'
+print('35'.zfill(6))
+# '0003.5'
+print('hello.zfill(10))
+# '00000hello'
+```
+#### 문자열 위치 찾기
+```python
+print('apple pineapple'.fine('pl'))
+# 2
+print('apple pineapple'.fine('xy'))
+# -1
+```
+#### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
