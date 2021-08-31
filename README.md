@@ -1229,9 +1229,26 @@ print('hello.zfill(10))
 ```
 #### 문자열 위치 찾기
 ```python
-print('apple pineapple'.fine('pl'))
+print('apple pineapple'.find('pl'))
 # 2
-print('apple pineapple'.fine('xy'))
+print('apple pineapple'.find('xy'))
 # -1
+print('apple pineapple'.index('pl'))
+# 2
+```
+* 문자열이 없으면 -1을 반환합니다.
+#### 오른쪽에서부터 문자열 위치 찾기
+```python
+print('apple pineapple'.rfind('pl'))
+# 12
+print('apple pineapple'.rfind('xy'))
+# -1
+print('apple pineapple'.rindex('pl'))
+# 12
+```
+#### 문자열 개수 세기
+```python
+print('apple pineapple'.count('pl'))
+# 2
 ```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
