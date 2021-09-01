@@ -1251,4 +1251,22 @@ print('apple pineapple'.rindex('pl'))
 print('apple pineapple'.count('pl'))
 # 2
 ```
+---
+### 문자열 서식 지정자와 포메팅 사용하기
+#### 서식 지정자로 문자열 넣기
+```python
+print('I am %s.' % 'james')
+# 'I am james.'
+```
+* 문자열로 바로 지정하지 않고 변수로도 지정 가능합니다.
+```python
+name = 'maria'
+print('I am %s.' % name)
+# 'I am maria.'
+```
+#### 서식 지정자로 숫자 넣기
+```python
+print('I am %d years old.' % 20)
+# 'I am 20 years old.'
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
