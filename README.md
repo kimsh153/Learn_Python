@@ -1273,4 +1273,9 @@ print('I am %s.' % name)
 print('I am %d years old.' % 20)
 # 'I am 20 years old.'
 ```
+#### 서식 지정자로 소수점 표현하기
+```python
+print('%f' % 2.3)
+# '2.300000'
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
