@@ -1278,4 +1278,11 @@ print('I am %d years old.' % 20)
 print('%f' % 2.3)
 # '2.300000'
 ```
+* '%.자릿수f' % 숫자로 소수점 이하 자리수를 지정 할 수 있습니다
+```python
+print('%.wf' % 2.3)
+# '2.30'
+print('%.3f' % 2.3)
+# '2.300'
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
