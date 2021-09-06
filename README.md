@@ -1292,4 +1292,19 @@ print('%10s' % 'python')
 print('%-10s' % 'python')
 # 'python    '
 ```
+#### 서식 지정자로 문자열 안에 값 여러 개 넣기
+```python
+print('Today is %d %s.' % (3, 'April')
+# 'Today is 3 April.'
+print('Today is %d%s.' % (3, 'April')
+# 'Today is 3April.'
+```
+* 서식지정자가 여러 개면 괄호 안의 값(변수)개수도 서식 지정자 개수와 똑같이 맞춰주어야 합니다.
+#### foramt 매서드 사용하기
+```python
+print('Hello, {0}'.format('world!'))
+# 'Hello, world!'
+print('Hello, {0}'.foramt(100)
+# 'Hello, 100'
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
