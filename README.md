@@ -1285,4 +1285,11 @@ print('%.wf' % 2.3)
 print('%.3f' % 2.3)
 # '2.300'
 ```
+#### 서식 지정자로 문자열 정렬하기
+```python
+print('%10s' % 'python')
+# '    python'
+print('%-10s' % 'python')
+# 'python    '
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
