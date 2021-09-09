@@ -1331,7 +1331,7 @@ print('Hello, {language} {version}'.format(language='Python', version=3.6)
 ```python
 language = 'Python'
 version = 3.6
-print(f'Hello, {language} {version}'
+print(f'Hello, {language} {version}')
 # 'Hello, Python 3.6'
 ```
 * 중괄호 출력하기
