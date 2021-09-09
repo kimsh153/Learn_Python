@@ -1307,4 +1307,36 @@ print('Hello, {0}'.format('world!'))
 print('Hello, {0}'.foramt(100)
 # 'Hello, 100'
 ```
+#### format 매서드로 값을 여러 개 넣기
+```python
+print('Hello, {0} {2} {1}'.format('Python', 'Script', 3.6)
+# 'Hello, Python 3.6 Script'
+```
+#### format 매서드로 같은 값을 여러 개 넣기
+```python
+print('{0} {0} {1} {1}'.format('Python', 'Script')
+# 'Python Python Script Script'
+```
+#### format 매서드에서 인덱스 생략하기
+```python
+print('Hello, {} {} {}'.format('Python', 'Script', 3.6)
+# 'Hello, Python Script 3.6'
+```
+#### format 매서드에서 인덱스 대신 이름 지정하기
+```python
+print('Hello, {language} {version}'.format(language='Python', version=3.6)
+# 'Hello, Python 3.6'
+```
+#### 문자열 포매팅에 변수를 그대로 사용하기
+```python
+language = 'Python'
+version = 3.6
+print(f'Hello, {language} {version}'
+# 'Hello, Python 3.6'
+```
+* 중괄호 출력하기
+```python
+print('{{ {0} }}'.format('Python')
+# '{ Python }'
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
