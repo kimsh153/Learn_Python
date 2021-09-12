@@ -1339,4 +1339,13 @@ print(f'Hello, {language} {version}')
 print('{{ {0} }}'.format('Python')
 # '{ Python }'
 ```
+#### format 매서드로 문자열 정렬하기
+```python
+print('{0:<10}'.format('python'))
+# 'python    '
+print('{0:>10}'.format('python'))
+# '    python'
+print('{:>10}'.foramt('python'))
+# '    python'
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
