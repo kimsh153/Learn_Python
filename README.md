@@ -1348,4 +1348,11 @@ print('{0:>10}'.format('python'))
 print('{:>10}'.foramt('python'))
 # '    python'
 ```
+#### 숫자 개수 맞추기
+```python
+print('%03d' % 1)
+# '001'
+print('{0:03d}'.format(35))
+# '035
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
