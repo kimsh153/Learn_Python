@@ -1354,5 +1354,10 @@ print('%03d' % 1)
 # '001'
 print('{0:03d}'.format(35))
 # '035
+print('%08.2f' % 3.6)
+# '00003.60'
+print('{0:08.2f}'.format(150.37)
+# '00150.37'
 ```
+
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
