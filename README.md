@@ -14,7 +14,7 @@ print('Hello', 'world!') # Hello world!
 ```python
 print(1, 2, 3, sep=', ') # 1, 2, 3
 print(4, 5, 6, sep=',') # 4,5,6
-print('Hello', 'python', sep='') #Hellopython
+print('Hello', 'python', sep='') # Hellopython
 print(1000, 2000, sep='x') # 1000x2000
 ```
 * 줄바꿈을 하고싶을때엔 줄바꿈 하고싶은 문자 뒤에 \n을 붙입니다
@@ -1358,6 +1358,13 @@ print('%08.2f' % 3.6)
 # '00003.60'
 print('{0:08.2f}'.format(150.37)
 # '00150.37'
+```
+#### 채우기와 정렬을 조합해서 사용하기
+```python
+print('{0:0<10}'.format(15)
+# '1500000000'
+print('{0:0>10}'.format(15)
+# '0000000015'
 ```
 
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
