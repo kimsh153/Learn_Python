@@ -1361,10 +1361,14 @@ print('{0:08.2f}'.format(150.37)
 ```
 #### 채우기와 정렬을 조합해서 사용하기
 ```python
-print('{0:0<10}'.format(15)
+print('{0:0<10}'.format(15))
 # '1500000000'
-print('{0:0>10}'.format(15)
+print('{0:0>10}'.format(15))
 # '0000000015'
 ```
-
+* 실수로 출력하기
+```python
+print('{0:0>10.2f}'.foramt(15))
+# '0000015.00'
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
