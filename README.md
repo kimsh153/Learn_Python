@@ -1371,4 +1371,13 @@ print('{0:0>10}'.format(15))
 print('{0:0>10.2f}'.foramt(15))
 # '0000015.00'
 ```
+* 공백넣어서 출력하기
+```python
+print('{0: >10}'.format(15))
+# '        15'
+print('{0:>10}'.foramt(15))
+# '        15'
+print('{0:x>10}'.format(15))
+# 'xxxxxxxx15'
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
