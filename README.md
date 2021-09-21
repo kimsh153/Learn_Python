@@ -1380,4 +1380,17 @@ print('{0:>10}'.foramt(15))
 print('{0:x>10}'.format(15))
 # 'xxxxxxxx15'
 ```
+---
+### 딕셔너리 응용하기
+#### 딕셔너리 키와 기본값 저장하기
+```python
+x = {'a': 10, 'b':20, 'c': 30, 'd': 40}
+x.setdefault('e')
+print(x)
+# {'a': 10, 'b':20, 'c':30, 'd':40, 'e': None}
+# 키 + 값
+x.setdefault('f', 100)
+print(x)
+# {'a': 10, 'b': 20, 'c': 30, 'd': 40, 'e': None, 'f': 100}
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
