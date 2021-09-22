@@ -1393,4 +1393,17 @@ x.setdefault('f', 100)
 print(x)
 # {'a': 10, 'b': 20, 'c': 30, 'd': 40, 'e': None, 'f': 100}
 ```
+#### 딕셔너리에서 키의 값 수정하기
+```python
+x = {'a': 10, 'b': 20, 'c':30, 'd':40}
+x.update(a=90)
+print(x)
+# {'a': 90, 'b': 20, 'c':30, 'd':40}
+x.update(e=50)
+print(x)
+# {'a': 90, 'b': 20, 'c':30, 'd':40, 'e': 50}
+x.update(a=900, f=60)
+print(x)
+# {'a': 900, 'b':20, 'c':30, 'd':40, 'e':50, 'f': 60}
+```
 #### 출처 : 코딩도장(https://dojang.io/course/view.php?id=7)
